@@ -1,4 +1,4 @@
-import React,{ useState } from "react";
+import React, { useState } from "react";
 import {
   FaTwitter,
   FaFacebookF,
@@ -8,7 +8,7 @@ import {
   FaEnvelope,
 } from "react-icons/fa";
 import { FiSearch } from "react-icons/fi";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -80,9 +80,7 @@ const Header = () => {
 
             {/* Our Company Dropdown */}
             <div className="relative group">
-              <button  
-              onClick={toggleDropdown}
-               className="flex items-center gap-1 hover:text-blue-600 transition-all duration-200 relative after:absolute after:top-12 after:left-0 after:w-full after:h-0.5 after:bg-blue-600 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-200">
+              <div className="flex items-center gap-1 hover:text-blue-600 transition-all duration-200 relative after:absolute after:top-12 after:left-0 after:w-full after:h-0.5 after:bg-blue-600 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-200">
                 Our Company
                 <svg
                   className="w-4 h-4" // Removed rotation
@@ -97,7 +95,7 @@ const Header = () => {
                     d="M19 9l-7 7-7-7"
                   />
                 </svg>
-              </button>
+              </div>
               <div className="absolute left-0 mt-8 w-60 bg-white border  shadow-lg opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 invisible group-hover:visible transition-all duration-200 z-50 transform origin-top uppercase text-sm p-2">
                 <Link
                   to="/about-us"
@@ -113,7 +111,7 @@ const Header = () => {
                   </span>
                 </Link>
                 <Link
-                 to="/mission-vision"
+                  to="/mission-vision"
                   className="block px-4 py-2 hover:text-blue-500 transition-all duration-400 hover:translate-x-2 relative group/item"
                 >
                   <span className="relative inline-block">
@@ -127,6 +125,7 @@ const Header = () => {
                 </Link>
                 <Link
                   to="/why-choose-us"
+                  onClick={() => console.log("Navigating to why choose us")}
                   className="block px-4 py-2 hover:text-blue-500 transition-all duration-400 hover:translate-x-2 relative group/item"
                 >
                   <span className="relative inline-block">
@@ -139,7 +138,7 @@ const Header = () => {
                   </span>
                 </Link>
                 <Link
-                  to='our-team'
+                  to="/our-team"
                   className="block px-4 py-2 hover:text-blue-500 transition-all duration-400 hover:translate-x-2 relative group/item"
                 >
                   <span className="relative inline-block">
@@ -156,9 +155,10 @@ const Header = () => {
 
             {/* Our Services Dropdown */}
             <div className="relative group">
-              <button  
-              onClick={toggleDropdown}
-               className="flex items-center gap-1 hover:text-blue-600 transition-all duration-200 relative after:absolute after:top-12 after:left-0 after:w-full after:h-0.5 after:bg-blue-600 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-200">
+              <button
+                onClick={toggleDropdown}
+                className="flex items-center gap-1 hover:text-blue-600 transition-all duration-200 relative after:absolute after:top-12 after:left-0 after:w-full after:h-0.5 after:bg-blue-600 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-200"
+              >
                 Our Services
                 <svg
                   className="w-4 h-4" // Removed rotation

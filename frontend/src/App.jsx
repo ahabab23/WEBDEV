@@ -9,7 +9,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 
 import AboutUs from "./pages/Company/AboutUs";
 import MissionVision from "./pages/Company/Mission";
-import WhyChooseUs from "./pages/Company/Why";
+import WhyChooseUs from "./pages/Company/WhyChooseUs";
 // import OurTeam from "./pages/OurTeam";
 
 import Strategy from "./pages/Services/Strategy"; 
