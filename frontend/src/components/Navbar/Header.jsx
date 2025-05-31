@@ -99,8 +99,8 @@ const Header = () => {
                 </svg>
               </button>
               <div className="absolute left-0 mt-8 w-60 bg-white border  shadow-lg opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 invisible group-hover:visible transition-all duration-200 z-50 transform origin-top uppercase text-sm p-2">
-                <a
-                  href="https://kangarosolutions.com/about-us/"
+                <Link
+                  to="/about-us"
                   className="block px-4 py-2 hover:text-blue-500 transition-all duration-400 hover:translate-x-2 relative group/item"
                 >
                   <span className="relative inline-block">
@@ -111,9 +111,9 @@ const Header = () => {
                       ABOUT US
                     </span>
                   </span>
-                </a>
-                <a
-                  href="https://kangarosolutions.com/mission-vision/"
+                </Link>
+                <Link
+                 to="/mission-vision"
                   className="block px-4 py-2 hover:text-blue-500 transition-all duration-400 hover:translate-x-2 relative group/item"
                 >
                   <span className="relative inline-block">
@@ -124,9 +124,9 @@ const Header = () => {
                       OUR MISSION AND VISION
                     </span>
                   </span>
-                </a>
-                <a
-                  href="https://kangarosolutions.com/why-choose-us/"
+                </Link>
+                <Link
+                  to="/why-choose-us"
                   className="block px-4 py-2 hover:text-blue-500 transition-all duration-400 hover:translate-x-2 relative group/item"
                 >
                   <span className="relative inline-block">
@@ -137,9 +137,9 @@ const Header = () => {
                       WHY CHOOSE US
                     </span>
                   </span>
-                </a>
-                <a
-                  href="https://kangarosolutions.com/our-team-2/"
+                </Link>
+                <Link
+                  to='our-team'
                   className="block px-4 py-2 hover:text-blue-500 transition-all duration-400 hover:translate-x-2 relative group/item"
                 >
                   <span className="relative inline-block">
@@ -150,7 +150,7 @@ const Header = () => {
                       OUR TEAM
                     </span>
                   </span>
-                </a>
+                </Link>
               </div>
             </div>
 

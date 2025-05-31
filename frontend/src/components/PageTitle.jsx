@@ -41,7 +41,8 @@ function PageTitle() {
       'strategy': 'STRATEGY DEVELOPMENT & EXECUTION',
       'human-capital': 'HUMAN CAPITAL MANAGEMENT',
       'ict' : 'ICT Consultancy Services',
-      'development': 'Front and Backend Development'
+      'development': 'Front and Backend Development',
+      'mission-vision' : 'OUR MISSION AND VISION',
       // Add other mappings as needed
     };
 
