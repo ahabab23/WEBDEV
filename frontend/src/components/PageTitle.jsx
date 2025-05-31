@@ -40,6 +40,8 @@ function PageTitle() {
     const pageNameMap = {
       'strategy': 'STRATEGY DEVELOPMENT & EXECUTION',
       'human-capital': 'HUMAN CAPITAL MANAGEMENT',
+      'ict' : 'ICT Consultancy Services',
+      'development': 'Front and Backend Development'
       // Add other mappings as needed
     };
 
@@ -81,7 +83,7 @@ function PageTitle() {
         </h1>
 
         {/* Breadcrumb on right */}
-        <div className="flex items-center text-white">
+        <div className="flex items-center text-white relative sm:right-40">
           <Link to="/" className="hover:text-blue-300 transition-colors">
             HOME
           </Link>

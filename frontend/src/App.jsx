@@ -12,10 +12,10 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 // import WhyChooseUs from "./pages/WhyChooseUs";
 // import OurTeam from "./pages/OurTeam";
 
-import Strategy from "./pages/Strategy"; 
+import Strategy from "./pages/Services/Strategy"; 
 // import Human from "./pages/Human";
-// import ict from "./pages/ICT";
-// import Front from "./pages/Front-Back";
+import ICT from "./pages/Services/ICT";
+import Development from "./pages/Services/Development";
 
 function App() {
   return (
@@ -36,10 +36,10 @@ function App() {
             
             {/* Servies pages */}
             <Route path="/strategy" element={<Strategy />} />
-            {/* <Route path="/human" element={<Human />} />
-            <Route path="/ict" element={<ict />} />
-            <Route path="/front-back" element={<Front-Back />} />
-             */}
+            {/* <Route path="/human" element={<Human />} /> */}
+            <Route path="/ict" element={<ICT />} />
+            <Route path="/development" element={<Development />} />
+            
             
           </Routes>
         </main>

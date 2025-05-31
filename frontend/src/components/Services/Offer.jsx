@@ -1,12 +1,12 @@
 import React from "react";
-import bgPhone from "../Assets/apple-w.png";
-import Dots from "../Assets/bg-art-2.png";
+import bgPhone from "../../Assets/apple-w.png";
+import Dots from "../../Assets/bg-art-2.png";
 
 function Offer() {
   return (
     <div className="py-16 relative overflow-hidden w-full bg-white">
       {/* Background dots - extreme right */}
-      <div className="absolute -right-10 bottom-20 h-full w-1/3">
+      <div className="absolute -right-10 bottom-20 h-full w-1/3 rotate-3">
         <img 
           src={Dots} 
           alt="Decorative dots" 

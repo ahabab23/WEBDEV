@@ -1,6 +1,6 @@
 import React from "react";
-import bgPattern from "../Assets/bg-art-1.png";
-import Watch from "../Assets/app-watch-1.jpg";
+import bgPattern from "../../Assets/bg-art-1.png";
+import Watch from "../../Assets/app-watch-1.jpg";
 
 function BusinessBenefits() {
   return (

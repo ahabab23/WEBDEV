@@ -188,8 +188,8 @@ const Header = () => {
                     </span>
                   </span>
                 </Link>
-                <a
-                  href="https://kangarosolutions.com/mission-vision/"
+                <Link
+                  to="/front-back"
                   className="block px-4 py-2 hover:text-blue-500 transition-all duration-400 hover:translate-x-2 relative group/item"
                 >
                   <span className="relative inline-block">
@@ -200,9 +200,9 @@ const Header = () => {
                       HUMAN CAPITAL MANAGEMENT
                     </span>
                   </span>
-                </a>
-                <a
-                  href="https://kangarosolutions.com/why-choose-us/"
+                </Link>
+                <Link
+                  to="/ict"
                   className="block px-4 py-2 hover:text-blue-500 transition-all duration-400 hover:translate-x-2 relative group/item"
                 >
                   <span className="relative inline-block">
@@ -213,9 +213,9 @@ const Header = () => {
                       ICT CONSULTANCY SERVICES
                     </span>
                   </span>
-                </a>
-                <a
-                  href="https://kangarosolutions.com/our-team-2/"
+                </Link>
+                <Link
+                  to="/development"
                   className="block px-4 py-2 hover:text-blue-500 transition-all duration-400 hover:translate-x-2 relative group/item"
                 >
                   <span className="relative inline-block">
@@ -226,7 +226,7 @@ const Header = () => {
                       FRONT AND BACKEND DEVELOPMENT
                     </span>
                   </span>
-                </a>
+                </Link>
               </div>
             </div>
 

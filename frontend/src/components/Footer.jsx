@@ -19,7 +19,7 @@ const Footer = () => {
           className="w-[280px] mb-6"
         />
 
-        <div className="flex flex-col md:flex-row justify-center gap-12 text-center mb-10">
+        <div className="flex flex-col md:flex-row justify-center gap-20 text-center mb-10">
           <div>
             <FaGlobe className="text-blue-500 text-2xl mx-auto mb-2" />
             <p>
