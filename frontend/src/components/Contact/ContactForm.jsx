@@ -20,7 +20,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 p-8 rounded-lg text-white">
+    <div className="bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 p-8  text-white">
       <div className="mb-8">
         <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
         <p className="text-blue-100">

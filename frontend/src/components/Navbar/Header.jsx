@@ -8,17 +8,24 @@ import {
   FaEnvelope,
 } from "react-icons/fa";
 import { FiSearch } from "react-icons/fi";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const location = useLocation();
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
+
+  // Helper function to check active route
+  const isActive = (path) => {
+    return location.pathname === path;
+  };
+
   return (
-    <header className="bg-white shadow-md">
-      {/* Top Bar */}
+    <header className="bg-white shadow-md ">
+      {/* Top Bar - Keep existing styles */}
       <div className="bg-[#0f1932] text-white text-sm">
         <div className="max-w-7xl mx-auto flex justify-between items-center px-4 py-2">
           <div className="flex space-x-4 text-white">
@@ -57,7 +64,7 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Main Navigation */}
+      {/* Main Navigation - Modified to add underlines and active states */}
       <div className="bg-white shadow-sm">
         <div className="max-w-7xl mx-auto flex justify-between items-center px-4 py-3 h-22">
           {/* Logo */}
@@ -71,19 +78,32 @@ const Header = () => {
 
           {/* Navigation Menu */}
           <nav className="hidden md:flex space-x-6 text-gray-800 font-medium items-center">
-            <a
-              href="https://kangarosolutions.com/"
-              className="hover:text-blue-600 transition"
+            {/* Home Link */}
+            <Link
+              to="/"
+              className={`hover:text-blue-600 transition relative ${
+                isActive("/") ? "text-blue-600" : ""
+              }`}
             >
               Home
-            </a>
+              <span className={`absolute -bottom-8 left-0 w-full h-0.5 bg-blue-600 transition-all duration-300 ${
+                isActive("/") ? "scale-x-100" : "scale-x-0 hover:scale-x-100"
+              }`}></span>
+            </Link>
 
             {/* Our Company Dropdown */}
             <div className="relative group">
-              <div className="flex items-center gap-1 hover:text-blue-600 transition-all duration-200 relative after:absolute after:top-12 after:left-0 after:w-full after:h-0.5 after:bg-blue-600 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-200">
-                Our Company
+              <div className={`flex items-center gap-1 hover:text-blue-600 transition-all duration-200 relative ${
+                location.pathname.startsWith("/about-us") || 
+                location.pathname.startsWith("/mission-vision") ||
+                location.pathname.startsWith("/why-choose-us") ||
+                location.pathname.startsWith("/our-team")
+                  ? "text-blue-600"
+                  : ""
+              }`}>
+                <span>Our Company</span>
                 <svg
-                  className="w-4 h-4" // Removed rotation
+                  className="w-4 h-4"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -95,11 +115,15 @@ const Header = () => {
                     d="M19 9l-7 7-7-7"
                   />
                 </svg>
+                {/* Underline only visible on hover */}
+                <span className="absolute -bottom-8 left-0 w-full h-0.5 bg-blue-600 transition-all duration-300 scale-x-0 group-hover:scale-x-100"></span>
               </div>
-              <div className="absolute left-0 mt-8 w-60 bg-white border  shadow-lg opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 invisible group-hover:visible transition-all duration-200 z-50 transform origin-top uppercase text-sm p-2">
+              <div className="absolute left-0 mt-8 w-60 bg-white border shadow-lg opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 invisible group-hover:visible transition-all duration-200 z-50 transform origin-top uppercase text-sm p-2">
                 <Link
                   to="/about-us"
-                  className="block px-4 py-2 hover:text-blue-500 transition-all duration-400 hover:translate-x-2 relative group/item"
+                  className={`block px-4 py-2 hover:text-blue-500 transition-all duration-400 hover:translate-x-2 relative group/item ${
+                    isActive("/about-us") ? "text-blue-600" : ""
+                  }`}
                 >
                   <span className="relative inline-block">
                     <span className="absolute -left-2 opacity-0 group-hover/item:opacity-100 transition-all duration-400 ease-in-out">
@@ -112,7 +136,9 @@ const Header = () => {
                 </Link>
                 <Link
                   to="/mission-vision"
-                  className="block px-4 py-2 hover:text-blue-500 transition-all duration-400 hover:translate-x-2 relative group/item"
+                  className={`block px-4 py-2 hover:text-blue-500 transition-all duration-400 hover:translate-x-2 relative group/item ${
+                    isActive("/mission-vision") ? "text-blue-600" : ""
+                  }`}
                 >
                   <span className="relative inline-block">
                     <span className="absolute -left-2 opacity-0 group-hover/item:opacity-100 transition-all duration-400 ease-in-out">
@@ -125,8 +151,9 @@ const Header = () => {
                 </Link>
                 <Link
                   to="/why-choose-us"
-                  onClick={() => console.log("Navigating to why choose us")}
-                  className="block px-4 py-2 hover:text-blue-500 transition-all duration-400 hover:translate-x-2 relative group/item"
+                  className={`block px-4 py-2 hover:text-blue-500 transition-all duration-400 hover:translate-x-2 relative group/item ${
+                    isActive("/why-choose-us") ? "text-blue-600" : ""
+                  }`}
                 >
                   <span className="relative inline-block">
                     <span className="absolute -left-2 opacity-0 group-hover/item:opacity-100 transition-all duration-400 ease-in-out">
@@ -139,7 +166,9 @@ const Header = () => {
                 </Link>
                 <Link
                   to="/our-team"
-                  className="block px-4 py-2 hover:text-blue-500 transition-all duration-400 hover:translate-x-2 relative group/item"
+                  className={`block px-4 py-2 hover:text-blue-500 transition-all duration-400 hover:translate-x-2 relative group/item ${
+                    isActive("/our-team") ? "text-blue-600" : ""
+                  }`}
                 >
                   <span className="relative inline-block">
                     <span className="absolute -left-2 opacity-0 group-hover/item:opacity-100 transition-all duration-400 ease-in-out">
@@ -157,11 +186,18 @@ const Header = () => {
             <div className="relative group">
               <button
                 onClick={toggleDropdown}
-                className="flex items-center gap-1 hover:text-blue-600 transition-all duration-200 relative after:absolute after:top-12 after:left-0 after:w-full after:h-0.5 after:bg-blue-600 after:scale-x-0 hover:after:scale-x-100 after:transition-transform after:duration-200"
+                className={`flex items-center gap-1 hover:text-blue-600 transition-all duration-200 relative ${
+                  location.pathname.startsWith("/strategy") || 
+                  location.pathname.startsWith("/front-back") ||
+                  location.pathname.startsWith("/ict") ||
+                  location.pathname.startsWith("/development")
+                    ? "text-blue-600"
+                    : ""
+                }`}
               >
-                Our Services
+                <span>Our Services</span>
                 <svg
-                  className="w-4 h-4" // Removed rotation
+                  className="w-4 h-4"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -173,11 +209,15 @@ const Header = () => {
                     d="M19 9l-7 7-7-7"
                   />
                 </svg>
+                {/* Underline only visible on hover */}
+                <span className="absolute -bottom-8 left-0 w-full h-0.5 bg-blue-600 transition-all duration-300 scale-x-0 group-hover:scale-x-100"></span>
               </button>
-              <div className="absolute left-0 mt-8 w-96 bg-white border  shadow-lg opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 invisible group-hover:visible transition-all duration-200 z-50 transform origin-top uppercase text-sm p-4">
+              <div className="absolute left-0 mt-8 w-96 bg-white border shadow-lg opacity-0 scale-95 group-hover:opacity-100 group-hover:scale-100 invisible group-hover:visible transition-all duration-200 z-50 transform origin-top uppercase text-sm p-4">
                 <Link
                   to="/strategy"
-                  className="block px-4 py-2 hover:text-blue-500 transition-all duration-400 hover:translate-x-2 relative group/item"
+                  className={`block px-4 py-2 hover:text-blue-500 transition-all duration-400 hover:translate-x-2 relative group/item ${
+                    isActive("/strategy") ? "text-blue-600" : ""
+                  }`}
                 >
                   <span className="relative inline-block">
                     <span className="absolute -left-2 opacity-0 group-hover/item:opacity-100 transition-all duration-400 ease-in-out">
@@ -190,7 +230,9 @@ const Header = () => {
                 </Link>
                 <Link
                   to="/front-back"
-                  className="block px-4 py-2 hover:text-blue-500 transition-all duration-400 hover:translate-x-2 relative group/item"
+                  className={`block px-4 py-2 hover:text-blue-500 transition-all duration-400 hover:translate-x-2 relative group/item ${
+                    isActive("/front-back") ? "text-blue-600" : ""
+                  }`}
                 >
                   <span className="relative inline-block">
                     <span className="absolute -left-2 opacity-0 group-hover/item:opacity-100 transition-all duration-400 ease-in-out">
@@ -203,7 +245,9 @@ const Header = () => {
                 </Link>
                 <Link
                   to="/ict"
-                  className="block px-4 py-2 hover:text-blue-500 transition-all duration-400 hover:translate-x-2 relative group/item"
+                  className={`block px-4 py-2 hover:text-blue-500 transition-all duration-400 hover:translate-x-2 relative group/item ${
+                    isActive("/ict") ? "text-blue-600" : ""
+                  }`}
                 >
                   <span className="relative inline-block">
                     <span className="absolute -left-2 opacity-0 group-hover/item:opacity-100 transition-all duration-400 ease-in-out">
@@ -216,7 +260,9 @@ const Header = () => {
                 </Link>
                 <Link
                   to="/development"
-                  className="block px-4 py-2 hover:text-blue-500 transition-all duration-400 hover:translate-x-2 relative group/item"
+                  className={`block px-4 py-2 hover:text-blue-500 transition-all duration-400 hover:translate-x-2 relative group/item ${
+                    isActive("/development") ? "text-blue-600" : ""
+                  }`}
                 >
                   <span className="relative inline-block">
                     <span className="absolute -left-2 opacity-0 group-hover/item:opacity-100 transition-all duration-400 ease-in-out">
@@ -230,24 +276,40 @@ const Header = () => {
               </div>
             </div>
 
-            <a
-              href="https://kangarosolutions.com/our-projects-portfolio/"
-              className="hover:text-blue-600 transition"
+            {/* Other Navigation Links */}
+            <Link
+              to="/our-projects-portfolio"
+              className={`hover:text-blue-600 transition relative ${
+                isActive("/our-projects-portfolio") ? "text-blue-600" : ""
+              }`}
             >
               Our Projects
-            </a>
+              <span className={`absolute -bottom-8 left-0 w-full h-0.5 bg-blue-600 transition-all duration-300 ${
+                isActive("/our-projects-portfolio") ? "scale-x-100" : "scale-x-0 hover:scale-x-100"
+              }`}></span>
+            </Link>
             <Link
               to="/contact"
-              className="hover:text-blue-600 transition"
+              className={`hover:text-blue-600 transition relative ${
+                isActive("/contact") ? "text-blue-600" : ""
+              }`}
             >
               Our Contacts
+              <span className={`absolute -bottom-8 left-0 w-full h-0.5 bg-blue-600 transition-all duration-300 ${
+                isActive("/contact") ? "scale-x-100" : "scale-x-0 hover:scale-x-100"
+              }`}></span>
             </Link>
-            <a
-              href="https://kangarosolutions.com/it-services/"
-              className="hover:text-blue-600 transition"
+            <Link
+              to="/ict"
+              className={`hover:text-blue-600 transition relative ${
+                isActive("/ict") ? "text-blue-600" : ""
+              }`}
             >
               ICT Consultancy Services
-            </a>
+              <span className={`absolute -bottom-8 left-0 w-full h-0.5 bg-blue-600 transition-all duration-300 ${
+                isActive("/ict") ? "scale-x-100" : "scale-x-0 hover:scale-x-100"
+              }`}></span>
+            </Link>
           </nav>
 
           {/* Search Icon */}
