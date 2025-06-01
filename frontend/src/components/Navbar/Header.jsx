@@ -236,12 +236,12 @@ const Header = () => {
             >
               Our Projects
             </a>
-            <a
-              href="https://kangarosolutions.com/contacts/"
+            <Link
+              to="/contact"
               className="hover:text-blue-600 transition"
             >
               Our Contacts
-            </a>
+            </Link>
             <a
               href="https://kangarosolutions.com/it-services/"
               className="hover:text-blue-600 transition"

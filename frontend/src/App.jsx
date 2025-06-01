@@ -6,6 +6,8 @@ import Welcome from "./components/Welcome";
 import Footer from "./components/Footer";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
+import Contact from "./pages/Contact";
+
 
 import AboutUs from "./pages/Company/AboutUs";
 import MissionVision from "./pages/Company/Mission";
@@ -39,6 +41,8 @@ function App() {
             {/* <Route path="/human" element={<Human />} /> */}
             <Route path="/ict" element={<ICT />} />
             <Route path="/development" element={<Development />} />
+
+            <Route path="/contact" element={<Contact />} />
             
             
           </Routes>
