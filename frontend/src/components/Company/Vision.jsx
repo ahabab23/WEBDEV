@@ -27,7 +27,7 @@ const VisionMissionSection = () => {
               className="absolute inset-0 bg-cover bg-center opacity-0 scale-105 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500 ease-in-out"
               style={{ backgroundImage: `url(${VisionBgImage})` }}
             ></div>
-            <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div className="absolute inset-0  opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
             {/* Content */}
             <div className="relative z-10">
@@ -59,7 +59,7 @@ const VisionMissionSection = () => {
               className="absolute inset-0 bg-cover bg-center opacity-0 scale-105 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500 ease-in-out"
               style={{ backgroundImage: `url(${MissionBgImage})` }}
             ></div>
-            <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div className="absolute inset-0  opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
             {/* Content */}
             <div className="relative z-10">

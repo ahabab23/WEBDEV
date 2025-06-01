@@ -3,6 +3,8 @@ import { Code, FileText } from "lucide-react";
 // Import your images at the top
 import VisionBgImage from "../../Assets/bg-icon-box1.jpg";
 import MissionBgImage from "../../Assets/bg-icon-box2.jpg";
+import AgileImage from "../../Assets/bg-icon-box3.jpg";
+import ExpImage from "../../Assets/bg-icon-box4.jpg";
 
 const ChoiceServices = () => {
   return (
@@ -19,15 +21,15 @@ const ChoiceServices = () => {
         </div>
 
         {/* Cards Grid */}
-        <div className="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-          {/* Our Vision Card */}
+        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          {/* Our Innovations Card */}
           <div className="group relative bg-white p-12 shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-500 overflow-hidden">
             {/* Background Image on Hover */}
             <div
               className="absolute inset-0 bg-cover bg-center opacity-0 scale-105 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500 ease-in-out"
               style={{ backgroundImage: `url(${VisionBgImage})` }}
             ></div>
-            <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div className="absolute inset-0  opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
             {/* Content */}
             <div className="relative z-10">
@@ -47,14 +49,68 @@ const ChoiceServices = () => {
             </div>
           </div>
 
-          {/* Our Mission Card */}
-          <div className="group relative bg-white  p-12 shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-500 overflow-hidden">
+               {/* Our Expertise Card */}
+               <div className="group relative bg-white p-12 shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-500 overflow-hidden">
             {/* Background Image on Hover */}
             <div
               className="absolute inset-0 bg-cover bg-center opacity-0 scale-105 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500 ease-in-out"
               style={{ backgroundImage: `url(${MissionBgImage})` }}
             ></div>
-            <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div className="absolute inset-0  opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+            {/* Content */}
+            <div className="relative z-10">
+              <div className="mb-8 flex justify-center">
+                <div className="w-16 h-16 bg-purple-100 rounded-xl flex items-center justify-center group-hover:bg-white/20 transition-colors duration-500">
+                  <Code className="w-8 h-8 text-purple-600 group-hover:text-white transition-colors duration-500" />
+                </div>
+              </div>
+
+              <h3 className="text-2xl font-bold text-center text-gray-900 mb-6 group-hover:text-white transition-colors duration-500">
+                Expertise
+              </h3>
+
+              <p className="text-gray-600 text-center leading-relaxed group-hover:text-gray-200 transition-colors duration-500">
+              Our team is comprised of the best in their field, who are highly experienced and enthusiastic about delivering the best solutions to our clients.
+              </p>
+            </div>
+          </div>
+
+               {/* Our Experience Card */}
+               <div className="group relative bg-white p-12 shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-500 overflow-hidden">
+            {/* Background Image on Hover */}
+            <div
+              className="absolute inset-0 bg-cover bg-center opacity-0 scale-105 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500 ease-in-out"
+              style={{ backgroundImage: `url(${AgileImage})` }}
+            ></div>
+            <div className="absolute inset-0  opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+            {/* Content */}
+            <div className="relative z-10">
+              <div className="mb-8 flex justify-center">
+                <div className="w-16 h-16 bg-purple-100 rounded-xl flex items-center justify-center group-hover:bg-white/20 transition-colors duration-500">
+                  <Code className="w-8 h-8 text-purple-600 group-hover:text-white transition-colors duration-500" />
+                </div>
+              </div>
+
+              <h3 className="text-2xl font-bold text-center text-gray-900 mb-6 group-hover:text-white transition-colors duration-500">
+                Experience
+              </h3>
+
+              <p className="text-gray-600 text-center leading-relaxed group-hover:text-gray-200 transition-colors duration-500">
+              We have been working in the industry for 6 years and have created a number of very successful systems. Our specialties include web design and implementation mobile apps dev and customer support services
+              </p>
+            </div>
+          </div>
+
+          {/* Our Agile Card */}
+          <div className="group relative bg-white  p-12 shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-500 overflow-hidden">
+            {/* Background Image on Hover */}
+            <div
+              className="absolute inset-0 bg-cover bg-center opacity-0 scale-105 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500 ease-in-out"
+              style={{ backgroundImage: `url(${ExpImage})` }}
+            ></div>
+            <div className="absolute inset-0  opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
             {/* Content */}
             <div className="relative z-10">

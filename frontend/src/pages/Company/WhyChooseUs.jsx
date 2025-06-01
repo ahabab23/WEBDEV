@@ -1,6 +1,7 @@
 import React from "react";
 import PageTitle from "../../components/PageTitle";
 import ChoiceServices from "../../components/Company/ChoiceServices";
+import TIndex from "../../components/Company/TIndex";
 
 
 function WhyChooseUs () {
@@ -8,6 +9,7 @@ function WhyChooseUs () {
     <>
       <PageTitle />
       <ChoiceServices />
+      <TIndex />
  
     </>
   );

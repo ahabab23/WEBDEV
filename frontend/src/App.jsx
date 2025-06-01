@@ -10,7 +10,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import AboutUs from "./pages/Company/AboutUs";
 import MissionVision from "./pages/Company/Mission";
 import WhyChooseUs from "./pages/Company/WhyChooseUs";
-// import OurTeam from "./pages/OurTeam";
+import OurTeam from "./pages/Company/Team";
 
 import Strategy from "./pages/Services/Strategy"; 
 // import Human from "./pages/Human";
@@ -32,7 +32,7 @@ function App() {
             <Route path="/about-us" element={<AboutUs />} />
             <Route path="/mission-vision" element={<MissionVision />} />
             <Route path="/why-choose-us" element={<WhyChooseUs />} />
-            {/* <Route path="/our-team" element={<OurTeam />} /> */}
+            <Route path="/our-team" element={<OurTeam />} />
             
             {/* Servies pages */}
             <Route path="/strategy" element={<Strategy />} />
