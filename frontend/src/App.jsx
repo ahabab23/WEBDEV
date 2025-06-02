@@ -7,6 +7,7 @@ import Footer from "./components/Footer";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 
 import Contact from "./pages/Contact";
+import Projects from "./pages/Projects/Projects";
 
 
 import AboutUs from "./pages/Company/AboutUs";
@@ -43,6 +44,7 @@ function App() {
             <Route path="/development" element={<Development />} />
 
             <Route path="/contact" element={<Contact />} />
+            <Route path="/our-projects-portfolio" element={<Projects />} />
             
             
           </Routes>
