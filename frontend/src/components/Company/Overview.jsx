@@ -47,6 +47,7 @@ const Overview = () => {
               to="/mission-vision"
               className="absolute top-0 left-0 overflow-hidden group h-60 w-60"
             >
+              <div className="absolute top-0 right-0 w-0 h-0 border-l-[25px] border-l-transparent border-t-[25px] border-t-[#42baff]  z-10"></div>
               <img
                 src={Image1}
                 alt="Our Mission"
@@ -63,8 +64,11 @@ const Overview = () => {
             {/* Our Vision - Top Right Square */}
             <Link
               to="/mission-vision"
-              className="absolute  h-60 w-60 left-72 top-14 overflow-hidden group"
+              className="absolute h-60 w-60 left-72 top-14 overflow-hidden group"
             >
+              {/* Smaller tag triangle */}
+              <div className="absolute top-0 right-0 w-0 h-0 border-l-[25px] border-l-transparent border-t-[25px] border-t-[#42baff] z-10"></div>
+
               <img
                 src={Image2}
                 alt="Our Vision"
@@ -83,6 +87,7 @@ const Overview = () => {
               to="/why-choose-us"
               className="absolute  h-60 w-60 top-72 overflow-hidden group"
             >
+              <div className="absolute top-0 right-0 w-0 h-0 border-l-[25px] border-l-transparent border-t-[25px] border-t-[#42baff]  z-10"></div>
               <img
                 src={Image3}
                 alt="Why Choose Us"

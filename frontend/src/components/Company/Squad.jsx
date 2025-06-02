@@ -25,11 +25,11 @@ function Squad() {
             >
               {/* Hover effect - desktop only */}
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="bg-blue-500/50 w-full relative top-44 h-1/2 opacity-0 scale-105 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500 ease-in-out flex flex-col items-center justify-center p-6 rounded-lg md:opacity-0"></div>
+                <div className="bg-[#43BAFF]/50 w-full relative top-44 h-1/2 opacity-0 scale-105 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500 ease-in-out flex flex-col items-center justify-center p-6 rounded-lg md:opacity-0"></div>
               </div>
 
               {/* Mobile content - always visible */}
-              <div className="md:hidden absolute bottom-0 left-0 right-0 bg-blue-500/50 p-4 text-center">
+              <div className="md:hidden absolute bottom-0 left-0 right-0 bg-[#43BAFF]/50 p-4 text-center">
                 <h3 className="text-xl font-bold text-white mb-2">
                   RRIAN AGWARI
                 </h3>
@@ -56,11 +56,11 @@ function Squad() {
             >
               {/* Hover effect - desktop only */}
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="bg-blue-500/50 w-full relative top-44 h-1/2 opacity-0 scale-105 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500 ease-in-out flex flex-col items-center justify-center p-6 rounded-lg md:opacity-0"></div>
+                <div className="bg-[#43BAFF]/50 w-full relative top-44 h-1/2 opacity-0 scale-105 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500 ease-in-out flex flex-col items-center justify-center p-6 rounded-lg md:opacity-0"></div>
               </div>
 
               {/* Mobile content - always visible */}
-              <div className="md:hidden absolute bottom-0 left-0 right-0 bg-blue-500/50 p-4 text-center">
+              <div className="md:hidden absolute bottom-0 left-0 right-0 bg-[#43BAFF]/50 p-4 text-center">
                 <h3 className="text-xl font-bold text-white mb-2">
                   GRIFFINS OSERO
                 </h3>
@@ -87,11 +87,11 @@ function Squad() {
             >
               {/* Hover effect - desktop only */}
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="bg-blue-500/50 w-full relative top-44 h-1/2 opacity-0 scale-105 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500 ease-in-out flex flex-col items-center justify-center p-6 rounded-lg md:opacity-0"></div>
+                <div className="bg-[#43BAFF]/50 w-full relative top-44 h-1/2 opacity-0 scale-105 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500 ease-in-out flex flex-col items-center justify-center p-6 rounded-lg md:opacity-0"></div>
               </div>
 
               {/* Mobile content - always visible */}
-              <div className="md:hidden absolute bottom-0 left-0 right-0 bg-blue-500/50 p-4 text-center">
+              <div className="md:hidden absolute bottom-0 left-0 right-0 bg-[#43BAFF]/50 p-4 text-center">
                 <h3 className="text-xl font-bold text-white mb-2">
                   PETER O. OTIENO
                 </h3>
@@ -118,11 +118,11 @@ function Squad() {
             >
               {/* Background Image on Hover - now reduced in size */}
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="bg-blue-500/50 w-full relative top-44 h-1/2 opacity-0 scale-105 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500 ease-in-out flex flex-col items-center justify-center p-6 rounded-lg md:opacity-0"></div>
+                <div className="bg-[#43BAFF]/50 w-full relative top-44 h-1/2 opacity-0 scale-105 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500 ease-in-out flex flex-col items-center justify-center p-6 rounded-lg md:opacity-0"></div>
               </div>
 
               {/* Content - Always visible on mobile, hidden on desktop until hover */}
-              <div className="md:hidden absolute bottom-0 left-0 right-0 bg-blue-500/50 p-4 text-center">
+              <div className="md:hidden absolute bottom-0 left-0 right-0 bg-[#43BAFF]/50 p-4 text-center">
                 <h3 className="text-xl font-bold text-white mb-2">
                   MARCUS EZRA
                 </h3>
