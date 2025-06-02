@@ -8,13 +8,25 @@ import {
   FaLinkedinIn,
   FaInstagram,
 } from "react-icons/fa";
+import logo from "../../src/Assets/WhatsApp-Image-2023-03-04-at-07.20.274.jpeg";
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-white py-10 px-4">
-      <div className="flex flex-col items-center">
+    <footer
+      className="text-white transition-all duration-300"
+      style={{
+        backgroundColor: "#000000",
+        backgroundImage:
+          "url(https://kangarosolutions.com/wp-content/uploads/2019/12/bg-footer1.png)",
+        backgroundPosition: "top center",
+        backgroundRepeat: "no-repeat",
+        paddingTop: "110px",
+        paddingBottom: "100px",
+      }}
+    >
+      <div className="flex flex-col items-center px-4">
         <img
-          src="https://kangarosolutions.com/wp-content/uploads/2019/12/WhatsApp-Image-2023-03-04-at-07.20.274.jpeg"
+          src={logo}
           alt="Kangaroo Solutions Logo"
           className="w-[280px] mb-6"
         />

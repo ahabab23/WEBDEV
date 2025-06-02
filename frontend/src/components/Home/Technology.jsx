@@ -1,5 +1,5 @@
 import React from "react";
-import ServiceBg from "../../Assets/service_bg3.jpg";
+import bgImage from "../../Assets/bg-pheader.jpg"; // Update this path to your background image
 import webIcon from "../../Assets/software-engineering.png";
 import androidIcon from "../../Assets/android.png";
 import iosIcon from "../../Assets/apple.png";
@@ -43,8 +43,8 @@ const techItems = [
 export default function TechnologyIndex() {
   return (
     <section
-      className="py-20 relative z-10 bg-cover bg-center"
-      style={{ backgroundImage: `url(${ServiceBg})` }}
+      className="py-30 relative z-10 bg-cover bg-center"
+      style={{ backgroundImage: `url(${bgImage})` }}
     >
       <div className="max-w-7xl mx-auto px-4 text-center text-white">
         <span className="text-sm text-purple-300">// TECHNOLOGY INDEX</span>

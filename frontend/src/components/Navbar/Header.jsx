@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import logo from "../../Assets/Parallel-Blue-and-NO-BG-1.png";
 import {
   FaTwitter,
   FaFacebookF,
@@ -30,9 +31,9 @@ const Header = () => {
   };
 
   const toggleMobileDropdown = (dropdown) => {
-    setMobileDropdownOpen(prev => ({
+    setMobileDropdownOpen((prev) => ({
       ...prev,
-      [dropdown]: !prev[dropdown]
+      [dropdown]: !prev[dropdown],
     }));
   };
 
@@ -42,10 +43,10 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-white shadow-md">
-      {/* Top Bar - Hidden on mobile */}
-      <div className="bg-[#0f1932] text-white text-sm hidden md:block">
-        <div className="max-w-7xl mx-auto flex justify-between items-center px-4 py-2">
+    <header className="bg-white shadow-md fixed z-100 w-full">
+      {/* Top Bar - Keep existing styles */}
+      <div className="bg-[#0f1932] text-white text-sm">
+        <div className="max-w-7xl mx-auto flex justify-between items-center px-14 py-2.5">
           <div className="flex space-x-4 text-white">
             <a
               href="#"
@@ -82,20 +83,16 @@ const Header = () => {
         </div>
       </div>
 
-      {/* Main Navigation */}
-      <div className="bg-white shadow-sm">
-        <div className="max-w-7xl mx-auto flex justify-between items-center px-4 py-3 h-22">
+      {/* Main Navigation - Modified to add underlines and active states */}
+      <div className="bg-white shadow-sm ">
+        <div className="max-w-7xl mx-auto flex justify-between items-center px-14 py-6 h25 font-bold">
           {/* Logo */}
-          <a href="https://kangarosolutions.com/">
-            <img
-              src="https://kangarosolutions.com/wp-content/uploads/2020/09/Parallel-Blue-and-NO-BG-1.png"
-              alt="Kangaroo Solutions"
-              className="h-8 md:h-10"
-            />
+          <a href="#">
+            <img src={logo} alt="Kangaroo Solutions" className="h-12" />
           </a>
 
-          {/* Desktop Navigation Menu */}
-          <nav className="hidden lg:flex space-x-6 text-gray-800 font-medium items-center">
+          {/* Navigation Menu */}
+          <nav className="hidden md:flex space-x-6 text-gray-800 font-bold items-center">
             {/* Home Link */}
             <Link
               to="/"
@@ -104,21 +101,25 @@ const Header = () => {
               }`}
             >
               Home
-              <span className={`absolute -bottom-8 left-0 w-full h-0.5 bg-blue-600 transition-all duration-300 ${
-                isActive("/") ? "scale-x-100" : "scale-x-0 hover:scale-x-100"
-              }`}></span>
+              <span
+                className={`absolute -bottom-8 left-0 w-full h-0.5 bg-blue-600 transition-all duration-300 ${
+                  isActive("/") ? "scale-x-100" : "scale-x-0 hover:scale-x-100"
+                }`}
+              ></span>
             </Link>
 
             {/* Our Company Dropdown */}
             <div className="relative group">
-              <div className={`flex items-center gap-1 hover:text-blue-600 transition-all duration-200 relative ${
-                location.pathname.startsWith("/about-us") || 
-                location.pathname.startsWith("/mission-vision") ||
-                location.pathname.startsWith("/why-choose-us") ||
-                location.pathname.startsWith("/our-team")
-                  ? "text-blue-600"
-                  : ""
-              }`}>
+              <div
+                className={`flex items-center gap-1 hover:text-blue-600 transition-all duration-200 relative ${
+                  location.pathname.startsWith("/about-us") ||
+                  location.pathname.startsWith("/mission-vision") ||
+                  location.pathname.startsWith("/why-choose-us") ||
+                  location.pathname.startsWith("/our-team")
+                    ? "text-blue-600"
+                    : ""
+                }`}
+              >
                 <span>Our Company</span>
                 <svg
                   className="w-4 h-4"
@@ -204,7 +205,7 @@ const Header = () => {
               <button
                 onClick={toggleDropdown}
                 className={`flex items-center gap-1 hover:text-blue-600 transition-all duration-200 relative ${
-                  location.pathname.startsWith("/strategy") || 
+                  location.pathname.startsWith("/strategy") ||
                   location.pathname.startsWith("/front-back") ||
                   location.pathname.startsWith("/ict") ||
                   location.pathname.startsWith("/development")
@@ -300,9 +301,13 @@ const Header = () => {
               }`}
             >
               Our Projects
-              <span className={`absolute -bottom-8 left-0 w-full h-0.5 bg-blue-600 transition-all duration-300 ${
-                isActive("/our-projects-portfolio") ? "scale-x-100" : "scale-x-0 hover:scale-x-100"
-              }`}></span>
+              <span
+                className={`absolute -bottom-8 left-0 w-full h-0.5 bg-blue-600 transition-all duration-300 ${
+                  isActive("/our-projects-portfolio")
+                    ? "scale-x-100"
+                    : "scale-x-0 hover:scale-x-100"
+                }`}
+              ></span>
             </Link>
             <Link
               to="/contact"
@@ -311,9 +316,13 @@ const Header = () => {
               }`}
             >
               Our Contacts
-              <span className={`absolute -bottom-8 left-0 w-full h-0.5 bg-blue-600 transition-all duration-300 ${
-                isActive("/contact") ? "scale-x-100" : "scale-x-0 hover:scale-x-100"
-              }`}></span>
+              <span
+                className={`absolute -bottom-8 left-0 w-full h-0.5 bg-blue-600 transition-all duration-300 ${
+                  isActive("/contact")
+                    ? "scale-x-100"
+                    : "scale-x-0 hover:scale-x-100"
+                }`}
+              ></span>
             </Link>
             <Link
               to="/ict"
@@ -322,9 +331,13 @@ const Header = () => {
               }`}
             >
               ICT Consultancy Services
-              <span className={`absolute -bottom-8 left-0 w-full h-0.5 bg-blue-600 transition-all duration-300 ${
-                isActive("/ict") ? "scale-x-100" : "scale-x-0 hover:scale-x-100"
-              }`}></span>
+              <span
+                className={`absolute -bottom-8 left-0 w-full h-0.5 bg-blue-600 transition-all duration-300 ${
+                  isActive("/ict")
+                    ? "scale-x-100"
+                    : "scale-x-0 hover:scale-x-100"
+                }`}
+              ></span>
             </Link>
           </nav>
 
@@ -334,7 +347,7 @@ const Header = () => {
             <button className="text-gray-600 hover:text-blue-600">
               <FiSearch size={20} />
             </button>
-            
+
             {/* Mobile Menu Button */}
             <button
               className="lg:hidden text-gray-600 hover:text-blue-600"
@@ -347,8 +360,14 @@ const Header = () => {
 
         {/* Mobile Menu Overlay */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden fixed inset-0 z-50 bg-black bg-opacity-50" onClick={toggleMobileMenu}>
-            <div className="fixed right-0 top-0 h-full w-80 bg-white shadow-lg transform transition-transform duration-300 ease-in-out" onClick={(e) => e.stopPropagation()}>
+          <div
+            className="lg:hidden fixed inset-0 z-50 bg-black bg-opacity-50"
+            onClick={toggleMobileMenu}
+          >
+            <div
+              className="fixed right-0 top-0 h-full w-80 bg-white shadow-lg transform transition-transform duration-300 ease-in-out"
+              onClick={(e) => e.stopPropagation()}
+            >
               <div className="flex justify-between items-center p-4 border-b">
                 <img
                   src="https://kangarosolutions.com/wp-content/uploads/2020/09/Parallel-Blue-and-NO-BG-1.png"
@@ -359,7 +378,7 @@ const Header = () => {
                   <FaTimes size={24} />
                 </button>
               </div>
-              
+
               {/* Mobile Contact Info */}
               <div className="p-4 bg-[#0f1932] text-white text-sm">
                 <div className="flex items-center space-x-2 mb-2">
@@ -371,10 +390,18 @@ const Header = () => {
                   <span>info@kangarosolutions.com</span>
                 </div>
                 <div className="flex space-x-4">
-                  <a href="#" className="hover:text-blue-400"><FaTwitter /></a>
-                  <a href="#" className="hover:text-blue-600"><FaFacebookF /></a>
-                  <a href="#" className="hover:text-blue-500"><FaLinkedinIn /></a>
-                  <a href="#" className="hover:text-pink-400"><FaInstagram /></a>
+                  <a href="#" className="hover:text-blue-400">
+                    <FaTwitter />
+                  </a>
+                  <a href="#" className="hover:text-blue-600">
+                    <FaFacebookF />
+                  </a>
+                  <a href="#" className="hover:text-blue-500">
+                    <FaLinkedinIn />
+                  </a>
+                  <a href="#" className="hover:text-pink-400">
+                    <FaInstagram />
+                  </a>
                 </div>
               </div>
 
@@ -393,19 +420,24 @@ const Header = () => {
                 {/* Our Company Mobile Dropdown */}
                 <div className="border-b">
                   <button
-                    onClick={() => toggleMobileDropdown('company')}
+                    onClick={() => toggleMobileDropdown("company")}
                     className="flex items-center justify-between w-full py-3 hover:text-blue-600 transition"
                   >
                     <span>Our Company</span>
                     <svg
                       className={`w-4 h-4 transition-transform duration-200 ${
-                        mobileDropdownOpen.company ? 'rotate-180' : ''
+                        mobileDropdownOpen.company ? "rotate-180" : ""
                       }`}
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
                     >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M19 9l-7 7-7-7"
+                      />
                     </svg>
                   </button>
                   {mobileDropdownOpen.company && (
@@ -413,7 +445,9 @@ const Header = () => {
                       <Link
                         to="/about-us"
                         className={`block py-2 text-sm hover:text-blue-600 transition ${
-                          isActive("/about-us") ? "text-blue-600 font-semibold" : ""
+                          isActive("/about-us")
+                            ? "text-blue-600 font-semibold"
+                            : ""
                         }`}
                         onClick={toggleMobileMenu}
                       >
@@ -422,7 +456,9 @@ const Header = () => {
                       <Link
                         to="/mission-vision"
                         className={`block py-2 text-sm hover:text-blue-600 transition ${
-                          isActive("/mission-vision") ? "text-blue-600 font-semibold" : ""
+                          isActive("/mission-vision")
+                            ? "text-blue-600 font-semibold"
+                            : ""
                         }`}
                         onClick={toggleMobileMenu}
                       >
@@ -431,7 +467,9 @@ const Header = () => {
                       <Link
                         to="/why-choose-us"
                         className={`block py-2 text-sm hover:text-blue-600 transition ${
-                          isActive("/why-choose-us") ? "text-blue-600 font-semibold" : ""
+                          isActive("/why-choose-us")
+                            ? "text-blue-600 font-semibold"
+                            : ""
                         }`}
                         onClick={toggleMobileMenu}
                       >
@@ -440,7 +478,9 @@ const Header = () => {
                       <Link
                         to="/our-team"
                         className={`block py-2 text-sm hover:text-blue-600 transition ${
-                          isActive("/our-team") ? "text-blue-600 font-semibold" : ""
+                          isActive("/our-team")
+                            ? "text-blue-600 font-semibold"
+                            : ""
                         }`}
                         onClick={toggleMobileMenu}
                       >
@@ -453,19 +493,24 @@ const Header = () => {
                 {/* Our Services Mobile Dropdown */}
                 <div className="border-b">
                   <button
-                    onClick={() => toggleMobileDropdown('services')}
+                    onClick={() => toggleMobileDropdown("services")}
                     className="flex items-center justify-between w-full py-3 hover:text-blue-600 transition"
                   >
                     <span>Our Services</span>
                     <svg
                       className={`w-4 h-4 transition-transform duration-200 ${
-                        mobileDropdownOpen.services ? 'rotate-180' : ''
+                        mobileDropdownOpen.services ? "rotate-180" : ""
                       }`}
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
                     >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M19 9l-7 7-7-7"
+                      />
                     </svg>
                   </button>
                   {mobileDropdownOpen.services && (
@@ -473,7 +518,9 @@ const Header = () => {
                       <Link
                         to="/strategy"
                         className={`block py-2 text-sm hover:text-blue-600 transition ${
-                          isActive("/strategy") ? "text-blue-600 font-semibold" : ""
+                          isActive("/strategy")
+                            ? "text-blue-600 font-semibold"
+                            : ""
                         }`}
                         onClick={toggleMobileMenu}
                       >
@@ -482,7 +529,9 @@ const Header = () => {
                       <Link
                         to="/human"
                         className={`block py-2 text-sm hover:text-blue-600 transition ${
-                          isActive("/front-back") ? "text-blue-600 font-semibold" : ""
+                          isActive("/front-back")
+                            ? "text-blue-600 font-semibold"
+                            : ""
                         }`}
                         onClick={toggleMobileMenu}
                       >
@@ -500,7 +549,9 @@ const Header = () => {
                       <Link
                         to="/development"
                         className={`block py-2 text-sm hover:text-blue-600 transition ${
-                          isActive("/development") ? "text-blue-600 font-semibold" : ""
+                          isActive("/development")
+                            ? "text-blue-600 font-semibold"
+                            : ""
                         }`}
                         onClick={toggleMobileMenu}
                       >
@@ -513,7 +564,9 @@ const Header = () => {
                 <Link
                   to="/our-projects-portfolio"
                   className={`block py-3 border-b hover:text-blue-600 transition ${
-                    isActive("/our-projects-portfolio") ? "text-blue-600 font-semibold" : ""
+                    isActive("/our-projects-portfolio")
+                      ? "text-blue-600 font-semibold"
+                      : ""
                   }`}
                   onClick={toggleMobileMenu}
                 >
