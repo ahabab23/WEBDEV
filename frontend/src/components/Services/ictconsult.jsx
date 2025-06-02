@@ -9,10 +9,10 @@ export default function ICTConsult() {
       style={{ backgroundImage: `url(${bgImage})` }}
     >
       <div className="w-full flex flex-col items-center justify-center min-h-[300px]">
-        <p className="text-3xl w-4/6 text-center mb-6">
+        <p className="sm:text-3xl text-xl w-4/6 text-center mb-6">
           // Drop us a line! We are here to answer your questions 24/7
         </p>
-        <h3 className="text-7xl font-extrabold text-center w-5/6 mb-8">
+        <h3 className="sm:text-7xl text-3xl font-extrabold text-center w-5/6 mb-8">
           NEED A CONSULTATION?
         </h3>
         <Link

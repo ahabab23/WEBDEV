@@ -16,7 +16,7 @@ import WhyChooseUs from "./pages/Company/WhyChooseUs";
 import OurTeam from "./pages/Company/Team";
 
 import Strategy from "./pages/Services/Strategy"; 
-// import Human from "./pages/Human";
+import Human from "./pages/Services/Human";
 import ICT from "./pages/Services/ICT";
 import Development from "./pages/Services/Development";
 
@@ -39,7 +39,7 @@ function App() {
             
             {/* Servies pages */}
             <Route path="/strategy" element={<Strategy />} />
-            {/* <Route path="/human" element={<Human />} /> */}
+            <Route path="/human" element={<Human />} />
             <Route path="/ict" element={<ICT />} />
             <Route path="/development" element={<Development />} />
 

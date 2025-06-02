@@ -41,10 +41,10 @@ const Overview = () => {
           </div>
 
           {/* Right Grid */}
-          <div className="relative w-full h-[500px]">
+          <div className="relative w-full h-[500px] sm:inline-block hidden">
             {/* Our Mission - Top Left Square */}
             <Link
-              to="/mission"
+              to="/mission-vision"
               className="absolute top-0 left-0 overflow-hidden group h-60 w-60"
             >
               <img
@@ -62,7 +62,7 @@ const Overview = () => {
 
             {/* Our Vision - Top Right Square */}
             <Link
-              to="/vision"
+              to="/mission-vision"
               className="absolute  h-60 w-60 left-72 top-14 overflow-hidden group"
             >
               <img

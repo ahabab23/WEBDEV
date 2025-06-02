@@ -39,7 +39,7 @@ function PageTitle() {
     // Custom mapping for specific routes
     const pageNameMap = {
       'strategy': 'STRATEGY DEVELOPMENT & EXECUTION',
-      'human-capital': 'HUMAN CAPITAL MANAGEMENT',
+      'human': 'HUMAN CAPITAL MANAGEMENT',
       'ict' : 'ICT Consultancy Services',
       'development': 'Front and Backend Development',
       'mission-vision' : 'OUR MISSION AND VISION',
@@ -79,12 +79,12 @@ function PageTitle() {
       {/* Content container */}
       <div className="relative z-10 container mx-auto px-6 flex justify-between items-center">
         {/* Page title on left */}
-        <h1 className="text-4xl font-bold text-white ml-8">
+        <h1 className="sm:text-4xl text-2xl font-bold text-white sm:ml-8 -ml-2">
           {formatTitle(getPageName())}
         </h1>
 
         {/* Breadcrumb on right */}
-        <div className="flex items-center text-white relative sm:right-40">
+        <div className="sm:flex items-center text-white relative sm:right-40 hidden ">
           <Link to="/" className="hover:text-blue-300 transition-colors">
             HOME
           </Link>

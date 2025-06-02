@@ -22,7 +22,7 @@ export default function ICTServicesSection() {
               We Offer a Wide Variety of ICT Consultancy Services
             </h2>
           </div>
-          <button className="bg-blue-400 hover:bg-blue-500 text-white px-6 py-3 font-semibold tracking-wider transition-colors">
+          <button className="sm:inline hidden bg-blue-400 hover:bg-blue-500 text-white px-6 py-3 font-semibold tracking-wider transition-colors">
             FREE QUOTE
           </button>
         </div>

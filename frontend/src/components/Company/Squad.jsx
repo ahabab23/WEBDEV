@@ -23,14 +23,26 @@ function Squad() {
               className="group relative h-96 bg-cover bg-center p-12 shadow-sm border border-blue-500 hover:shadow-xl transition-all duration-500 overflow-hidden"
               style={{ backgroundImage: `url(${GM})` }}
             >
-              {/* Background Image on Hover - now reduced in size */}
+              {/* Hover effect - desktop only */}
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="bg-blue-500/50 w-full relative top-22 h-1/2 opacity-0 scale-105 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500 ease-in-out flex flex-col items-center justify-center p-6 rounded-lg">
-                  {/* Content moved here */}
-                  <h3 className="text-xl font-bold text-center text-white mb-2 transition-colors duration-500">
+                <div className="bg-blue-500/50 w-full relative top-44 h-1/2 opacity-0 scale-105 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500 ease-in-out flex flex-col items-center justify-center p-6 rounded-lg md:opacity-0"></div>
+              </div>
+
+              {/* Mobile content - always visible */}
+              <div className="md:hidden absolute bottom-0 left-0 right-0 bg-blue-500/50 p-4 text-center">
+                <h3 className="text-xl font-bold text-white mb-2">
+                  RRIAN AGWARI
+                </h3>
+                <p className="text-white text-m">General Manager</p>
+              </div>
+
+              {/* Desktop content - visible on hover */}
+              <div className="hidden md:block absolute inset-0  items-center justify-center">
+                <div className="w-full relative top-56 h-1/2 flex flex-col items-center justify-center p-6 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  <h3 className="text-xl font-bold text-center text-white mb-2">
                     RRIAN AGWARI
                   </h3>
-                  <p className=" text-center leading-relaxed text-white text-m">
+                  <p className="text-center leading-relaxed text-white text-m">
                     General Manager
                   </p>
                 </div>
@@ -42,14 +54,26 @@ function Squad() {
               className="group relative h-96 bg-cover bg-center p-12 shadow-sm border border-blue-500 hover:shadow-xl transition-all duration-500 overflow-hidden"
               style={{ backgroundImage: `url(${cto})` }}
             >
-              {/* Background Image on Hover - now reduced in size */}
+              {/* Hover effect - desktop only */}
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="bg-blue-500/50 w-full relative top-22 h-1/2 opacity-0 scale-105 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500 ease-in-out flex flex-col items-center justify-center p-6 rounded-lg">
-                  {/* Content moved here */}
-                  <h3 className="text-xl font-bold text-center text-white mb-2 transition-colors duration-500">
+                <div className="bg-blue-500/50 w-full relative top-44 h-1/2 opacity-0 scale-105 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500 ease-in-out flex flex-col items-center justify-center p-6 rounded-lg md:opacity-0"></div>
+              </div>
+
+              {/* Mobile content - always visible */}
+              <div className="md:hidden absolute bottom-0 left-0 right-0 bg-blue-500/50 p-4 text-center">
+                <h3 className="text-xl font-bold text-white mb-2">
+                  GRIFFINS OSERO
+                </h3>
+                <p className="text-white text-m">Chief Technology Officer</p>
+              </div>
+
+              {/* Desktop content - visible on hover */}
+              <div className="hidden md:block absolute inset-0  items-center justify-center">
+                <div className="w-full relative top-56 h-1/2 flex flex-col items-center justify-center p-6 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  <h3 className="text-xl font-bold text-center text-white mb-2">
                     GRIFFINS OSERO
                   </h3>
-                  <p className=" text-center leading-relaxed text-white text-m">
+                  <p className="text-center leading-relaxed text-white text-m">
                     Chief Technology Officer
                   </p>
                 </div>
@@ -61,14 +85,26 @@ function Squad() {
               className="group relative h-96 bg-cover bg-center p-12 shadow-sm border border-blue-500 hover:shadow-xl transition-all duration-500 overflow-hidden"
               style={{ backgroundImage: `url(${Lawyer})` }}
             >
-              {/* Background Image on Hover - now reduced in size */}
+              {/* Hover effect - desktop only */}
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="bg-blue-500/50 w-full relative top-22 h-1/2 opacity-0 scale-105 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500 ease-in-out flex flex-col items-center justify-center p-6 rounded-lg">
-                  {/* Content moved here */}
-                  <h3 className="text-xl font-bold text-center text-white mb-2 transition-colors duration-500">
+                <div className="bg-blue-500/50 w-full relative top-44 h-1/2 opacity-0 scale-105 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500 ease-in-out flex flex-col items-center justify-center p-6 rounded-lg md:opacity-0"></div>
+              </div>
+
+              {/* Mobile content - always visible */}
+              <div className="md:hidden absolute bottom-0 left-0 right-0 bg-blue-500/50 p-4 text-center">
+                <h3 className="text-xl font-bold text-white mb-2">
+                  PETER O. OTIENO
+                </h3>
+                <p className="text-white text-m">Advocate</p>
+              </div>
+
+              {/* Desktop content - visible on hover */}
+              <div className="hidden md:block absolute inset-0 items-center justify-center">
+                <div className="w-full relative top-56 h-1/2 flex flex-col items-center justify-center p-6 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  <h3 className="text-xl font-bold text-center text-white mb-2">
                     PETER O. OTIENO
                   </h3>
-                  <p className=" text-center leading-relaxed text-white text-m">
+                  <p className="text-center leading-relaxed text-white text-m">
                     Advocate
                   </p>
                 </div>
@@ -82,12 +118,24 @@ function Squad() {
             >
               {/* Background Image on Hover - now reduced in size */}
               <div className="absolute inset-0 flex items-center justify-center">
-                <div className="bg-blue-500/50 w-full relative top-22 h-1/2 opacity-0 scale-105 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500 ease-in-out flex flex-col items-center justify-center p-6 rounded-lg">
-                  {/* Content moved here */}
-                  <h3 className="text-xl font-bold text-center text-white mb-2 transition-colors duration-500">
+                <div className="bg-blue-500/50 w-full relative top-44 h-1/2 opacity-0 scale-105 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500 ease-in-out flex flex-col items-center justify-center p-6 rounded-lg md:opacity-0"></div>
+              </div>
+
+              {/* Content - Always visible on mobile, hidden on desktop until hover */}
+              <div className="md:hidden absolute bottom-0 left-0 right-0 bg-blue-500/50 p-4 text-center">
+                <h3 className="text-xl font-bold text-white mb-2">
+                  MARCUS EZRA
+                </h3>
+                <p className="text-white text-m">Director of Creative Design</p>
+              </div>
+
+              {/* Content - Hidden on mobile, visible on desktop hover */}
+              <div className="hidden md:block absolute inset-0 items-center justify-center">
+                <div className="w-full relative top-56 h-1/2 flex flex-col items-center justify-center p-6 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                  <h3 className="text-xl font-bold text-center text-white mb-2">
                     MARCUS EZRA
                   </h3>
-                  <p className=" text-center leading-relaxed text-white text-m">
+                  <p className="text-center leading-relaxed text-white text-m">
                     Director of Creative Design
                   </p>
                 </div>

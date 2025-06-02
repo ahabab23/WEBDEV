@@ -6,7 +6,7 @@ function Offer() {
   return (
     <div className="py-16 relative overflow-hidden w-full bg-white">
       {/* Background dots - extreme right */}
-      <div className="absolute -right-10 bottom-20 h-full w-1/3 rotate-3">
+      <div className=" sm:inline hidden absolute -right-10 bottom-20 h-full w-1/3 rotate-3">
         <img 
           src={Dots} 
           alt="Decorative dots" 
