@@ -20,6 +20,19 @@ import Human from "./pages/Services/Human";
 import ICT from "./pages/Services/ICT";
 import Development from "./pages/Services/Development";
 
+// Project Links 
+import DetaineeCaseManagement from "./pages/Projects/Detainee";
+import ITFiberInfrastructure from "./pages/Projects/ItFiber";
+import DataCenterInfrastructure from "./pages/Projects/DateCenter"
+import CentralDatabaseRegistration from "./pages/Projects/Cdr";
+import HRMBiometricSystem from "./pages/Projects/Hrm"
+import SafeCityManagement from "./pages/Projects/Smp";
+import HumanResourceManagement from "./pages/Projects/HumanResource";
+import CountyRevenueCollection from "./pages/Projects/Revenue";
+import MicrofinanceManagement from "./pages/Projects/MicroFinance";
+import DigitalLoansMobile from "./pages/Projects/DigitalLoan";
+import MyAccountantApp from "./pages/Projects/Accountant";
+
 function App() {
   return (
     <BrowserRouter>
@@ -45,6 +58,22 @@ function App() {
 
             <Route path="/contact" element={<Contact />} />
             <Route path="/our-projects-portfolio" element={<Projects />} />
+             
+             {/* Project Pages  */}
+             <Route path="/detainee-case-management" element={<DetaineeCaseManagement />} />
+             <Route path="/it-fiber-infrastructure" element={<ITFiberInfrastructure />} />
+             <Route path="/data-center-infrastructure" element={<DataCenterInfrastructure />} />
+             <Route path="/central-database-registration" element={<CentralDatabaseRegistration />} />
+             <Route path="/hrm-biometric-system" element={<HRMBiometricSystem />} />
+             <Route path="/safe-city-management" element={<SafeCityManagement />} />
+             <Route path="/county-hrm-system" element={<HumanResourceManagement />} />
+             <Route path="/county-revenue-collection" element={<CountyRevenueCollection />} />
+             <Route path="/microfinance-management" element={<MicrofinanceManagement />} />
+             <Route path="/digital-loans-mobile" element={<DigitalLoansMobile />} />
+             <Route path="/my-accountant-app" element={<MyAccountantApp />} />
+
+
+
             
             
           </Routes>

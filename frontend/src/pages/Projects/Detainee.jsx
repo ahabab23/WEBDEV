@@ -4,15 +4,13 @@ import ProjectNavigator from "../../components/Projects/ProjectNavigator";
 import RelatedProjects from "../../components/Projects/RelatedProjects";
 import PageTitle from "../../components/PageTitle";
 
-const DigitalLoansMobile = () => {
-  const [currentProjectId, setCurrentProjectId] = useState(
-    "digital-loans-mobile"
-  );
+const DetaineeCaseManagement = () => {
+  const [currentProjectId, setCurrentProjectId] = useState("detainee-case-management");
 
   return (
     <>
       <PageTitle />
-      <div className="min-h-screen bg-gray-50 py-8">
+      <div className="min-h-screen  py-8">
         <div className="max-w-4xl mx-auto px-4">
           <ProjectDetails projectId={currentProjectId} />
           <ProjectNavigator
@@ -26,4 +24,4 @@ const DigitalLoansMobile = () => {
   );
 };
 
-export default DigitalLoansMobile;
+export default DetaineeCaseManagement;
