@@ -8,6 +8,7 @@ import {
   FaEnvelope,
 } from "react-icons/fa";
 import { FiSearch } from "react-icons/fi";
+import logo from "../../Assets/Images/Parallel-Blue-and-NO-BG-1.png";
 import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
@@ -24,10 +25,10 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-white shadow-md ">
+    <header className="bg-white shadow-md fixed z-100 w-full">
       {/* Top Bar - Keep existing styles */}
       <div className="bg-[#0f1932] text-white text-sm">
-        <div className="max-w-7xl mx-auto flex justify-between items-center px-4 py-2">
+        <div className="max-w-7xl mx-auto flex justify-between items-center px-14 py-2.5">
           <div className="flex space-x-4 text-white">
             <a
               href="#"
@@ -65,19 +66,15 @@ const Header = () => {
       </div>
 
       {/* Main Navigation - Modified to add underlines and active states */}
-      <div className="bg-white shadow-sm">
-        <div className="max-w-7xl mx-auto flex justify-between items-center px-4 py-3 h-22">
+      <div className="bg-white shadow-sm ">
+        <div className="max-w-7xl mx-auto flex justify-between items-center px-14 py-6 h25 font-bold">
           {/* Logo */}
-          <a href="https://kangarosolutions.com/">
-            <img
-              src="https://kangarosolutions.com/wp-content/uploads/2020/09/Parallel-Blue-and-NO-BG-1.png"
-              alt="Kangaroo Solutions"
-              className="h-10"
-            />
+          <a href="#">
+            <img src={logo} alt="Kangaroo Solutions" className="h-12" />
           </a>
 
           {/* Navigation Menu */}
-          <nav className="hidden md:flex space-x-6 text-gray-800 font-medium items-center">
+          <nav className="hidden md:flex space-x-6 text-gray-800 font-bold items-center">
             {/* Home Link */}
             <Link
               to="/"
@@ -86,21 +83,25 @@ const Header = () => {
               }`}
             >
               Home
-              <span className={`absolute -bottom-8 left-0 w-full h-0.5 bg-blue-600 transition-all duration-300 ${
-                isActive("/") ? "scale-x-100" : "scale-x-0 hover:scale-x-100"
-              }`}></span>
+              <span
+                className={`absolute -bottom-8 left-0 w-full h-0.5 bg-blue-600 transition-all duration-300 ${
+                  isActive("/") ? "scale-x-100" : "scale-x-0 hover:scale-x-100"
+                }`}
+              ></span>
             </Link>
 
             {/* Our Company Dropdown */}
             <div className="relative group">
-              <div className={`flex items-center gap-1 hover:text-blue-600 transition-all duration-200 relative ${
-                location.pathname.startsWith("/about-us") || 
-                location.pathname.startsWith("/mission-vision") ||
-                location.pathname.startsWith("/why-choose-us") ||
-                location.pathname.startsWith("/our-team")
-                  ? "text-blue-600"
-                  : ""
-              }`}>
+              <div
+                className={`flex items-center gap-1 hover:text-blue-600 transition-all duration-200 relative ${
+                  location.pathname.startsWith("/about-us") ||
+                  location.pathname.startsWith("/mission-vision") ||
+                  location.pathname.startsWith("/why-choose-us") ||
+                  location.pathname.startsWith("/our-team")
+                    ? "text-blue-600"
+                    : ""
+                }`}
+              >
                 <span>Our Company</span>
                 <svg
                   className="w-4 h-4"
@@ -187,7 +188,7 @@ const Header = () => {
               <button
                 onClick={toggleDropdown}
                 className={`flex items-center gap-1 hover:text-blue-600 transition-all duration-200 relative ${
-                  location.pathname.startsWith("/strategy") || 
+                  location.pathname.startsWith("/strategy") ||
                   location.pathname.startsWith("/front-back") ||
                   location.pathname.startsWith("/ict") ||
                   location.pathname.startsWith("/development")
@@ -252,8 +253,7 @@ const Header = () => {
                   <span className="relative inline-block">
                     <span className="absolute -left-2 opacity-0 group-hover/item:opacity-100 transition-all duration-400 ease-in-out">
                       //
-                    </span>
-                    <span className="group-hover/item:pl-2 transition-all duration-400">
+                      <span className="group-hover/item:pl-2 transition-all duration-400"></span>
                       ICT CONSULTANCY SERVICES
                     </span>
                   </span>
@@ -279,14 +279,19 @@ const Header = () => {
             {/* Other Navigation Links */}
             <Link
               to="/our-projects-portfolio"
+              Our
+              Projects
               className={`hover:text-blue-600 transition relative ${
                 isActive("/our-projects-portfolio") ? "text-blue-600" : ""
               }`}
             >
-              Our Projects
-              <span className={`absolute -bottom-8 left-0 w-full h-0.5 bg-blue-600 transition-all duration-300 ${
-                isActive("/our-projects-portfolio") ? "scale-x-100" : "scale-x-0 hover:scale-x-100"
-              }`}></span>
+              <span
+                className={`absolute -bottom-8 left-0 w-full h-0.5 bg-blue-600 transition-all duration-300 ${
+                  isActive("/our-projects-portfolio")
+                    ? "scale-x-100"
+                    : "scale-x-0 hover:scale-x-100"
+                }`}
+              ></span>
             </Link>
             <Link
               to="/contact"
@@ -295,9 +300,13 @@ const Header = () => {
               }`}
             >
               Our Contacts
-              <span className={`absolute -bottom-8 left-0 w-full h-0.5 bg-blue-600 transition-all duration-300 ${
-                isActive("/contact") ? "scale-x-100" : "scale-x-0 hover:scale-x-100"
-              }`}></span>
+              <span
+                className={`absolute -bottom-8 left-0 w-full h-0.5 bg-blue-600 transition-all duration-300 ${
+                  isActive("/contact")
+                    ? "scale-x-100"
+                    : "scale-x-0 hover:scale-x-100"
+                }`}
+              ></span>
             </Link>
             <Link
               to="/ict"
@@ -306,9 +315,13 @@ const Header = () => {
               }`}
             >
               ICT Consultancy Services
-              <span className={`absolute -bottom-8 left-0 w-full h-0.5 bg-blue-600 transition-all duration-300 ${
-                isActive("/ict") ? "scale-x-100" : "scale-x-0 hover:scale-x-100"
-              }`}></span>
+              <span
+                className={`absolute -bottom-8 left-0 w-full h-0.5 bg-blue-600 transition-all duration-300 ${
+                  isActive("/ict")
+                    ? "scale-x-100"
+                    : "scale-x-0 hover:scale-x-100"
+                }`}
+              ></span>
             </Link>
           </nav>
 
