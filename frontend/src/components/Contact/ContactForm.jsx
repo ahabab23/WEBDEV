@@ -6,6 +6,8 @@ const ContactForm = () => {
     email: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
 
   const handleChange = (e) => {
     setFormData({
@@ -14,13 +16,40 @@ const ContactForm = () => {
     });
   };
 
-  const handleSubmit = () => {
-    // Handle form submission here
-    console.log('Form submitted:', formData);
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+
+    try {
+      const response = await fetch('http://127.0.0.1:5000/api/contacts', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email_address: formData.email,
+          message: formData.message
+        })
+      });
+
+      if (response.ok) {
+        setSubmitStatus('success');
+        setFormData({ name: '', email: '', message: '' }); // Reset form
+      } else {
+        setSubmitStatus('error');
+      }
+    } catch (error) {
+      setSubmitStatus('error');
+      console.error('Error submitting form:', error);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
-    <div className="bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 p-8  text-white relative sm:top-10 top-4">
+    <div className="bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 p-8 text-white relative sm:top-10 top-4">
       <div className="mb-8">
         <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
         <p className="text-blue-100">
@@ -29,7 +58,7 @@ const ContactForm = () => {
         </p>
       </div>
 
-      <div className="space-y-6">
+      <form onSubmit={handleSubmit} className="space-y-6">
         {/* Name Field */}
         <div>
           <input
@@ -39,7 +68,7 @@ const ContactForm = () => {
             value={formData.name}
             onChange={handleChange}
             required
-            className="w-full px-4 py-4  bg-gray-200/30   placeholder-white placeholder-opacity-80 text-white focus:outline-none focus:ring-0   transition-all duration-500"
+            className="w-full px-4 py-4 bg-gray-200/30 placeholder-white placeholder-opacity-80 text-white focus:outline-none focus:ring-0 transition-all duration-500"
           />
         </div>
 
@@ -52,7 +81,7 @@ const ContactForm = () => {
             value={formData.email}
             onChange={handleChange}
             required
-             className="w-full px-4 py-4  bg-gray-200/30   placeholder-white placeholder-opacity-80 text-white focus:outline-none focus:ring-0   transition-all duration-500"
+            className="w-full px-4 py-4 bg-gray-200/30 placeholder-white placeholder-opacity-80 text-white focus:outline-none focus:ring-0 transition-all duration-500"
           />
         </div>
 
@@ -64,20 +93,28 @@ const ContactForm = () => {
             value={formData.message}
             onChange={handleChange}
             rows={6}
-             className="w-full px-4 py-4  bg-gray-200/30   placeholder-white placeholder-opacity-80 text-white focus:outline-none focus:ring-0   transition-all duration-500"
+            className="w-full px-4 py-4 bg-gray-200/30 placeholder-white placeholder-opacity-80 text-white focus:outline-none focus:ring-0 transition-all duration-500"
           />
         </div>
 
-        {/* Submit Button */}
-        <div>
+        {/* Submit Button and Status Message */}
+        <div className="space-y-2">
           <button
-            onClick={handleSubmit}
-            className="bg-white text-black font-semibold px-8 py-3  hover:bg-purple-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 transition-all duration-500 transform hover:scale-105 active:scale-95"
+            type="submit"
+            disabled={isSubmitting}
+            className={`bg-white text-black font-semibold px-8 py-3 hover:bg-purple-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 transition-all duration-500 transform hover:scale-105 active:scale-95 ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
           >
-            SEND MESSAGE
+            {isSubmitting ? 'SENDING...' : 'SEND MESSAGE'}
           </button>
+          
+          {submitStatus === 'success' && (
+            <p className="text-green-200 font-medium">Thank you! Your message has been sent successfully.</p>
+          )}
+          {submitStatus === 'error' && (
+            <p className="text-red-200 font-medium">Oops! Something went wrong. Please try again.</p>
+          )}
         </div>
-      </div>
+      </form>
     </div>
   );
 };
