@@ -162,6 +162,20 @@ def update_post(current_user, post_id):
     db.session.commit()
     return jsonify({'message': 'Post updated'})
 
+@app.route('/api/posts/<int:post_id>', methods=['GET'])
+def get_post(post_id):
+    post = Post.query.get_or_404(post_id)
+    output = {
+        'id': post.id,
+        'title': post.title,
+        'description': post.description,
+        'published': post.published.strftime("%B %d, %Y") if post.published else None,
+        'category': post.category,
+        'client': post.client,
+        'image_url': post.image_url
+    }
+    return jsonify(output)
+
 @app.route('/api/posts/<int:post_id>', methods=['DELETE'])
 @token_required
 def delete_post(current_user, post_id):
