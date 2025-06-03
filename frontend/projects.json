@@ -6,16 +6,16 @@
     "Published": "June 18, 2019",
     "Category": "Back-end and Front-end Application",
     "Client": "Federal Government Of Somalia",
-    "Imageurl": "https://kangarosolutions.com/wp-content/uploads/2023/03/detainee2.jpg"
+    "Imageurl": "https://res.cloudinary.com/dny9v95td/image/upload/v1748967010/detainee2_kqreb8.jpg"
   },
   {
     "Id": 2,
     "Title": "IT Fiber Infrastructure Project",
     "Description": "We connected different government offices to each other through fiber optic cables.",
-    "Published": "December, 2019",
+    "Published": "December 01, 2019",
     "Category": "Back-end and Front-end Application",
     "Client": "Federal Government Of Somalia",
-    "Imageurl": "https://kangarosolutions.com/wp-content/uploads/2023/03/fibre.jpg"
+    "Imageurl": "https://res.cloudinary.com/dny9v95td/image/upload/v1748967107/fibre_cxmeio.jpg"
   },
   {
     "Id": 3,
@@ -24,16 +24,16 @@
     "Published": "June 18, 2019",
     "Category": "Data Center and Hardwares",
     "Client": "Federal Government Of Somalia",
-    "Imageurl": "https://kangarosolutions.com/wp-content/uploads/2023/03/data_center-1.jpg"
+    "Imageurl": "https://res.cloudinary.com/dny9v95td/image/upload/v1748967172/data_center-1_ouqq52.jpg"
   },
   {
     "Id": 4,
     "Title": "Central Database for Registration (CDR) and Vehicle Registration System",
     "Description": "We implemented and delivered a comprehensive a Central Database for Registration (CDR) and Vehicle Registration System Projects for Federal Republic of Somalia. This project improved security accountability for wide government employees.",
-    "Published": "November, 2018",
+    "Published": "November 01, 2018",
     "Category": "Back-end and Front-end Application",
     "Client": "Federal Government Of Somalia",
-    "Imageurl": "https://kangarosolutions.com/wp-content/uploads/2023/03/vehicle_reg.jpg"
+    "Imageurl": "https://res.cloudinary.com/dny9v95td/image/upload/v1748967262/vehicle_reg_zhn9g3.jpg"
   },
   {
     "Id": 5,
@@ -42,7 +42,7 @@
     "Published": "March 09, 2018",
     "Category": "Back-end and Front-end Application",
     "Client": "Federal Government Of Somalia",
-    "Imageurl": "https://kangarosolutions.com/wp-content/uploads/2023/03/hr_biometrics.jpg"
+    "Imageurl": "https://res.cloudinary.com/dny9v95td/image/upload/v1748967361/hr_biometrics_ja4vkb.jpg"
   },
   {
     "Id": 6,
@@ -51,7 +51,7 @@
     "Published": "January 10, 2017",
     "Category": "Back-end and Front-end Application",
     "Client": "Federal Government Of Somalia",
-    "Imageurl": "https://kangarosolutions.com/wp-content/uploads/2023/03/safe.jpg"
+    "Imageurl": "https://res.cloudinary.com/dny9v95td/image/upload/v1748967461/safe_obhvpq.jpg"
   },
   {
     "Id": 7,
@@ -60,7 +60,7 @@
     "Published": "October 12, 2019",
     "Category": "Design / Ideas",
     "Client": "Fingrow Capital Limited - Nairobi - Kenya",
-    "Imageurl": "https://kangarosolutions.com/wp-content/uploads/2019/11/micro-finance3.jpg"
+    "Imageurl": "https://res.cloudinary.com/dny9v95td/image/upload/v1748967556/micro-finance3_chvsgr.jpg"
   },
   {
     "Id": 8,
@@ -69,7 +69,7 @@
     "Published": "February 18, 2022",
     "Category": "Mobile Applications",
     "Client": "Department Of Defence (DOD) - Government Of Kenya",
-    "Imageurl": "https://kangarosolutions.com/wp-content/uploads/2019/11/digital_lending.png"
+    "Imageurl": "https://res.cloudinary.com/dny9v95td/image/upload/v1748967640/digital_lending_ds8xdk.png"
   },
   {
     "Id": 9,
@@ -78,16 +78,16 @@
     "Published": "June 20, 2023",
     "Category": "Mobile Application Development",
     "Client": "Kangaroo Solutions Limited",
-    "Imageurl": "https://kangarosolutions.com/wp-content/uploads/2019/11/myaccount.jpg"
+    "Imageurl": "https://res.cloudinary.com/dny9v95td/image/upload/v1748967732/myaccount_zthzac.jpg"
   },
   {
     "Id": 10,
     "Title": "Human Resource Management System",
     "Description": "This a robust human resource management system implemented to several clients including County Government of Nairobi. The system is managing county staff database and the personnel operations including: Leave Management System, Trainings and capacity building, Bio-metrics attendance, Staff appraisals.",
-    "Published": "May, 2015",
+    "Published": "May 01, 2015",
     "Category": "Back-end and Front-end Development",
     "Client": "County Government Of Nairobi",
-    "Imageurl": "https://kangarosolutions.com/wp-content/uploads/2019/11/nairobi_county.jpg"
+    "Imageurl": "https://res.cloudinary.com/dny9v95td/image/upload/v1748967834/nairobi_county_bsgfmn.jpg"
   },
   {
     "Id": 11,
@@ -96,6 +96,6 @@
     "Published": "December 01, 2019",
     "Category": "Back-end and Front-end Development",
     "Client": "County Government Of Kiambu and County Government Of Kakamega",
-    "Imageurl": "https://kangarosolutions.com/wp-content/uploads/2019/11/revenue_collections.jpg"
+    "Imageurl": "https://res.cloudinary.com/dny9v95td/image/upload/v1748967958/revenue_collections_ja9dvn.jpg"
   }
 ]
