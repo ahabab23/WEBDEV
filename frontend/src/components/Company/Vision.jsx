@@ -41,7 +41,7 @@ const VisionMissionSection = () => {
         ].map(({ title, icon, text, bgImage }, idx) => (
           <div
             key={idx}
-            className="group relative p-6 text-center border border-transparent hover:border-gray-200 hover:shadow-md overflow-hidden transition-[background,border,border-radius,box-shadow,transform] duration-2000"
+            className="group relative p-6 text-center border border-transparent hover:border-gray-200 hover:shadow-md overflow-hidden transition-[background,border,border-radius,box-shadow,transform] duration-5000"
             style={{
               backgroundSize: "cover",
               backgroundPosition: "center",
@@ -58,7 +58,7 @@ const VisionMissionSection = () => {
             <span className="absolute top-[-15px] right-[-15px] w-[30px] h-[30px] bg-[#43baff] rotate-45 z-10 opacity-0 group-hover:opacity-100 transition-all duration-500"></span>
 
             {/* Content */}
-            <div className="relative z-10 transition-colors duration-300 text-gray-800 group-hover:text-white">
+            <div className="relative z-10 transition-colors duration-500 text-gray-800 group-hover:text-white">
               <div className="flex justify-center items-center mb-4">
                 <img 
                   src={icon} 

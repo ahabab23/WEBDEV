@@ -20,7 +20,7 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 p-8  text-white">
+    <div className="bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 p-8  text-white relative sm:top-10 top-4">
       <div className="mb-8">
         <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
         <p className="text-blue-100">
@@ -39,7 +39,7 @@ const ContactForm = () => {
             value={formData.name}
             onChange={handleChange}
             required
-            className="w-full px-4 py-4  bg-opacity-20 border border-white border-opacity-30  placeholder-white placeholder-opacity-80 text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 focus:border-transparent transition-all duration-300"
+            className="w-full px-4 py-4  bg-gray-200/30   placeholder-white placeholder-opacity-80 text-white focus:outline-none focus:ring-0   transition-all duration-500"
           />
         </div>
 
@@ -52,7 +52,7 @@ const ContactForm = () => {
             value={formData.email}
             onChange={handleChange}
             required
-            className="w-full px-4 py-4  bg-opacity-20 border border-white border-opacity-30  placeholder-white placeholder-opacity-80 text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 focus:border-transparent transition-all duration-300"
+             className="w-full px-4 py-4  bg-gray-200/30   placeholder-white placeholder-opacity-80 text-white focus:outline-none focus:ring-0   transition-all duration-500"
           />
         </div>
 
@@ -64,7 +64,7 @@ const ContactForm = () => {
             value={formData.message}
             onChange={handleChange}
             rows={6}
-            className="w-full px-4 py-4  bg-opacity-20 border border-white border-opacity-30  placeholder-white placeholder-opacity-80 text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 focus:border-transparent transition-all duration-300 resize-none"
+             className="w-full px-4 py-4  bg-gray-200/30   placeholder-white placeholder-opacity-80 text-white focus:outline-none focus:ring-0   transition-all duration-500"
           />
         </div>
 

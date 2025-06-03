@@ -36,7 +36,7 @@ const Carousel = () => {
             <img
               src={logo.src}
               alt={logo.alt}
-              className="w-36 h-auto mx-auto filter grayscale hover:grayscale-0 transition duration-300"
+              className="w-36 h-auto mx-auto filter grayscale hover:grayscale-0 transition duration-500"
             />
           </SwiperSlide>
         ))}

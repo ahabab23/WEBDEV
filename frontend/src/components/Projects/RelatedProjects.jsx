@@ -36,30 +36,46 @@ const RelatedProjects = ({ currentProjectId, maxItems = 3 }) => {
   }
 
   return (
-    <div className="mt-12">
-      <h2 className="text-2xl font-bold text-gray-800 mb-6">Related Projects</h2>
-      <div className="grid md:grid-cols-3 gap-8 max-w-8xl mx-auto">
+    <div className="mt-8 sm:mt-12 px-4 sm:px-0">
+      <h2 className="text-xl sm:text-2xl font-bold text-gray-800 mb-4 sm:mb-6">
+        Related Projects
+      </h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 max-w-8xl mx-auto">
         {relatedProjects.map((project) => (
           <a
             key={project.Id}
             href={`/${findStringId(project.Id)}`}
-            className="group relative p-12 shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-500 overflow-hidden min-h-[300px] flex flex-col justify-between"
+            className="group relative shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-500 overflow-hidden min-h-[250px] sm:min-h-[300px] flex flex-col justify-between"
           >
+            {/* Background Image */}
             {project.Imageurl && (
               <div
-                className="absolute inset-0 bg-cover bg-center opacity-100 scale-105 group-hover:scale-125 transition-all duration-500 ease-in-out"
+                className="absolute inset-0 bg-cover bg-center scale-100 lg:scale-105 lg:group-hover:scale-125 transition-all duration-500 ease-in-out"
                 style={{ backgroundImage: `url(${project.Imageurl})` }}
               ></div>
             )}
             {!project.Imageurl && (
               <div className="absolute inset-0 bg-gradient-to-br from-blue-600 to-purple-700"></div>
             )}
-            <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-40 transition-opacity duration-500 ease-in-out"></div>
-            <div className="relative z-10 flex flex-col justify-between h-full">
-              <h3 className="text-2xl font-bold text-left text-white mb-6 transition-colors duration-500">
+            
+            {/* Overlay - Different for mobile and desktop */}
+            <div className="absolute inset-0 bg-black/40 sm:bg-black/20 lg:bg-black/0 lg:group-hover:bg-black/40 transition-all duration-500 ease-in-out"></div>
+            
+            {/* Content Container */}
+            <div className="relative z-10 flex flex-col justify-between h-full p-4 sm:p-6 lg:p-8">
+              {/* Title - Always visible on mobile, hover-only on desktop */}
+              <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-left text-white mb-3 sm:mb-4 lg:mb-6 
+                           opacity-100 sm:opacity-100 lg:opacity-0 lg:group-hover:opacity-100 
+                           transform translate-y-0 sm:translate-y-0 lg:translate-y-4 lg:group-hover:translate-y-0
+                           transition-all duration-500">
                 {project.Title}
               </h3>
-              <p className="text-gray-200 text-left leading-relaxed transition-colors duration-500">
+              
+              {/* Description - Always visible on mobile, hover-only on desktop */}
+              <p className="text-sm sm:text-base text-gray-200 text-left leading-relaxed
+                          opacity-100 sm:opacity-100 lg:opacity-0 lg:group-hover:opacity-100
+                          transform translate-y-0 sm:translate-y-0 lg:translate-y-4 lg:group-hover:translate-y-0
+                          transition-all duration-500 delay-75">
                 {project.Client || project.Category}
               </p>
             </div>

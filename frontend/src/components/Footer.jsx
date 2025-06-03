@@ -13,7 +13,7 @@ import logo from "../../src/Assets/WhatsApp-Image-2023-03-04-at-07.20.274.jpeg";
 const Footer = () => {
   return (
     <footer
-      className="text-white transition-all duration-300"
+      className="text-white transition-all duration-500"
       style={{
         backgroundColor: "#000000",
         backgroundImage:

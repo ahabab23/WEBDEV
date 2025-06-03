@@ -43,12 +43,12 @@ export default function PartnersCarousel() {
               href={partner.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex flex-col items-center transition duration-300 hover:text-black"
+              className="flex flex-col items-center transition duration-500 hover:text-black"
             >
               <img
                 src={partner.image}
                 alt={partner.name}
-                className="w-36 h-auto object-contain grayscale hover:grayscale-0 transition duration-300"
+                className="w-36 h-auto object-contain grayscale hover:grayscale-0 transition duration-500"
               />
             </a>
           ))}

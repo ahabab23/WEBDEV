@@ -49,7 +49,7 @@ const ChooseUs = () => {
 
                 {/* Animated Divider */}
                 <div className="w-full overflow-hidden mb-3">
-                  <div className="h-1 bg-gray-300 w-full scale-x-0 origin-left transition-all duration-300 group-hover:scale-x-100 group-hover:bg-purple-700" />
+                  <div className="h-1 bg-gray-300 w-full scale-x-0 origin-left transition-all duration-500 group-hover:scale-x-100 group-hover:bg-purple-700" />
                 </div>
 
                 {/* Paragraph */}
@@ -65,7 +65,7 @@ const ChooseUs = () => {
 
                 {/* Animated Divider */}
                 <div className="w-full overflow-hidden mb-3">
-                  <div className="h-1 bg-gray-300 w-full scale-x-0 origin-left transition-all duration-300 group-hover:scale-x-100 group-hover:bg-purple-700" />
+                  <div className="h-1 bg-gray-300 w-full scale-x-0 origin-left transition-all duration-500 group-hover:scale-x-100 group-hover:bg-purple-700" />
                 </div>
 
                 {/* Paragraph */}

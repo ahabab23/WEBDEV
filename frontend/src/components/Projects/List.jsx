@@ -93,7 +93,6 @@ export const servicesData = {
     }
   ],
   FEDERAL_GOVERNMENT: [
-    // Same as ALL but only federal government projects
     {
         id: 'detainee-case-management',
         title: 'Detainee Case Management Information System (DeMIS Baarista)',
@@ -138,7 +137,6 @@ export const servicesData = {
       }
   ],
   COUNTY_GOVERNMENTS: [
-    // Same as ALL but only county government projects
     {
         id: 'county-hrm-system',
         title: 'Human Resource Management System',
@@ -155,7 +153,6 @@ export const servicesData = {
       },
   ],
   SMES: [
-    // Same as ALL but only SME projects
     {
         id: 'microfinance-management',
         title: 'Micro-Finance Management Systems',
@@ -172,7 +169,6 @@ export const servicesData = {
       },
   ],
   SAAS: [
-    // Same as ALL but only SaaS projects
     {
         id: 'my-accountant-app',
         title: 'MyAccountant App',
@@ -185,28 +181,42 @@ export const servicesData = {
 
 export const List = ({ items }) => {
   return (
-    <div className="grid md:grid-cols-4 gap-8 max-w-8xl mx-auto">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 max-w-8xl mx-auto px-4 sm:px-0">
       {items.map((item) => (
         <a 
           key={item.id} 
           href={item.link}
-          className="group relative p-12 shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-500 overflow-hidden min-h-[300px] flex flex-col justify-between"
+          className="group relative shadow-sm border border-gray-100 hover:shadow-xl transition-all duration-500 overflow-hidden min-h-[250px] sm:min-h-[300px] flex flex-col justify-between"
         >
+          {/* Background Image */}
           {item.image && (
             <div
-              className="absolute inset-0 bg-cover bg-center opacity-100 scale-105 group-hover:scale-125 transition-all duration-500 ease-in-out"
+              className="absolute inset-0 bg-cover bg-center scale-100 lg:scale-105 lg:group-hover:scale-125 transition-all duration-500 ease-in-out"
               style={{ backgroundImage: `url(${item.image})` }}
             ></div>
           )}
           {!item.image && (
             <div className="absolute inset-0 bg-gradient-to-br from-blue-600 to-purple-700"></div>
           )}
-          <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-40 transition-opacity duration-500 ease-in-out"></div>
-          <div className="relative z-10 flex flex-col justify-between h-full">
-            <h3 className="text-2xl font-bold text-left text-white mb-6 transition-colors duration-500">
+          
+          {/* Overlay - Different for mobile and desktop */}
+          <div className="absolute inset-0 bg-black/40 sm:bg-black/20 lg:bg-black/0 lg:group-hover:bg-black/40 transition-all duration-500 ease-in-out"></div>
+          
+          {/* Content Container */}
+          <div className="relative z-10 flex flex-col justify-between h-full p-4 sm:p-6 lg:p-8">
+            {/* Title - Always visible on mobile, hover-only on desktop */}
+            <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-left text-white mb-3 sm:mb-4 lg:mb-6 
+                         opacity-100 sm:opacity-100 lg:opacity-0 lg:group-hover:opacity-100 
+                         transform translate-y-0 sm:translate-y-0 lg:translate-y-4 lg:group-hover:translate-y-0
+                         transition-all duration-500">
               {item.title}
             </h3>
-            <p className="text-gray-200 text-left leading-relaxed transition-colors duration-500">
+            
+            {/* Description - Always visible on mobile, hover-only on desktop */}
+            <p className="text-sm sm:text-base text-gray-200 text-left leading-relaxed
+                        opacity-100 sm:opacity-100 lg:opacity-0 lg:group-hover:opacity-100
+                        transform translate-y-0 sm:translate-y-0 lg:translate-y-4 lg:group-hover:translate-y-0
+                        transition-all duration-500 delay-75">
               {item.description}
             </p>
           </div>
