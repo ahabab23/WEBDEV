@@ -11,11 +11,13 @@ import UsersPage from "./UsersPage";
 import PostsPage from "./PostsPage";
 import ContactsPage from "./ContactsPage";
 import logo from "./WhatsApp-Image-2023-03-04-at-07.20.271.jpeg";
+import { useNavigate } from "react-router-dom";
 
 export default function DashboardLayout() {
+  const navigate = useNavigate();
   const handleLogout = () => {
     localStorage.removeItem("token");
-    window.location.href = "/admin/login";
+    navigate("/admin/login");
   };
 
   const linkClasses = (isActive) =>

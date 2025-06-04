@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -15,7 +17,7 @@ export default function Login() {
         { email, password }
       );
       localStorage.setItem("token", response.data.token);
-      window.location.href = "/admin/dashboard/users";
+      navigate("/admin/dashboard/users");
     } catch (err) {
       setError(`Invalid credentials,${err}`);
     }
