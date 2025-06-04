@@ -142,7 +142,9 @@ export const useServicesData = () => {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const response = await fetch("http://127.0.0.1:5000/api/posts");
+        const response = await fetch(
+          "https://kangaroobackend.onrender.com/api/posts"
+        );
         const data = await response.json();
         console.log("Fetched data:", data); // Log the raw data
         const categorized = categorizeProjects(data);

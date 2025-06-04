@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
+    name: "",
+    email: "",
+    message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
@@ -12,7 +12,7 @@ const ContactForm = () => {
   const handleChange = (e) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   };
 
@@ -22,27 +22,30 @@ const ContactForm = () => {
     setSubmitStatus(null);
 
     try {
-      const response = await fetch('http://127.0.0.1:5000/api/contacts', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          name: formData.name,
-          email_address: formData.email,
-          message: formData.message
-        })
-      });
+      const response = await fetch(
+        "https://kangaroobackend.onrender.com/api/contacts",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            name: formData.name,
+            email_address: formData.email,
+            message: formData.message,
+          }),
+        }
+      );
 
       if (response.ok) {
-        setSubmitStatus('success');
-        setFormData({ name: '', email: '', message: '' }); // Reset form
+        setSubmitStatus("success");
+        setFormData({ name: "", email: "", message: "" }); // Reset form
       } else {
-        setSubmitStatus('error');
+        setSubmitStatus("error");
       }
     } catch (error) {
-      setSubmitStatus('error');
-      console.error('Error submitting form:', error);
+      setSubmitStatus("error");
+      console.error("Error submitting form:", error);
     } finally {
       setIsSubmitting(false);
     }
@@ -53,7 +56,7 @@ const ContactForm = () => {
       <div className="mb-8">
         <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
         <p className="text-blue-100">
-          Your email address will not be published. Required fields are marked 
+          Your email address will not be published. Required fields are marked
           <span className="text-white font-semibold"> *</span>
         </p>
       </div>
@@ -102,16 +105,22 @@ const ContactForm = () => {
           <button
             type="submit"
             disabled={isSubmitting}
-            className={`bg-white text-black font-semibold px-8 py-3 hover:bg-purple-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 transition-all duration-500 transform hover:scale-105 active:scale-95 ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
+            className={`bg-white text-black font-semibold px-8 py-3 hover:bg-purple-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-50 transition-all duration-500 transform hover:scale-105 active:scale-95 ${
+              isSubmitting ? "opacity-50 cursor-not-allowed" : ""
+            }`}
           >
-            {isSubmitting ? 'SENDING...' : 'SEND MESSAGE'}
+            {isSubmitting ? "SENDING..." : "SEND MESSAGE"}
           </button>
-          
-          {submitStatus === 'success' && (
-            <p className="text-green-200 font-medium">Thank you! Your message has been sent successfully.</p>
+
+          {submitStatus === "success" && (
+            <p className="text-green-200 font-medium">
+              Thank you! Your message has been sent successfully.
+            </p>
           )}
-          {submitStatus === 'error' && (
-            <p className="text-red-200 font-medium">Oops! Something went wrong. Please try again.</p>
+          {submitStatus === "error" && (
+            <p className="text-red-200 font-medium">
+              Oops! Something went wrong. Please try again.
+            </p>
           )}
         </div>
       </form>

@@ -1,6 +1,7 @@
 import React from "react";
 import bgPattern from "../../Assets/bg-art-1.png";
 import Watch from "../../Assets/app-watch-1.jpg";
+import laptop from "../../Assets/laptop.png";
 
 function BusinessBenefits() {
   return (
@@ -30,7 +31,11 @@ function BusinessBenefits() {
           {/* Center Device */}
           <div className="flex justify-center mb-8">
             <div className="relative">
-              <img src={Watch} alt="Apple Watch" className="w-60 md:w-80 h-auto" />
+              <img
+                src={Watch}
+                alt="Apple Watch"
+                className="w-60 md:w-80 h-auto"
+              />
             </div>
           </div>
 
@@ -43,11 +48,7 @@ function BusinessBenefits() {
                   Software as a Service
                 </h3>
                 <div className="bg-purple-100 p-2 rounded-lg">
-                  <img
-                    src="/api/placeholder/24/24"
-                    alt="SaaS icon"
-                    className="w-6 h-6"
-                  />
+                  <img src={laptop} alt="SaaS icon" className="w-6 h-6" />
                 </div>
               </div>
               <p className="text-gray-600 text-m mr-14 leading-8">
@@ -179,7 +180,8 @@ function BusinessBenefits() {
                 </h3>
               </div>
               <p className="text-gray-600 text-sm md:text-base leading-6">
-                51% of smartphone users have discovered a new company or product.
+                51% of smartphone users have discovered a new company or
+                product.
               </p>
             </div>
 
@@ -198,7 +200,8 @@ function BusinessBenefits() {
                 </h3>
               </div>
               <p className="text-gray-600 text-sm md:text-base leading-6">
-                Move your SaaS products to mobile. Companies with a professional mobile
+                Move your SaaS products to mobile. Companies with a professional
+                mobile
               </p>
             </div>
 
@@ -217,7 +220,8 @@ function BusinessBenefits() {
                 </h3>
               </div>
               <p className="text-gray-600 text-sm md:text-base leading-6">
-                Develop a custom mobile app to thrive in a mobile market worth over $100.
+                Develop a custom mobile app to thrive in a mobile market worth
+                over $100.
               </p>
             </div>
 
@@ -236,7 +240,8 @@ function BusinessBenefits() {
                 </h3>
               </div>
               <p className="text-gray-600 text-sm md:text-base leading-6">
-                80% of time users spend in social media from their mobile devices.
+                80% of time users spend in social media from their mobile
+                devices.
               </p>
             </div>
 
@@ -255,7 +260,8 @@ function BusinessBenefits() {
                 </h3>
               </div>
               <p className="text-gray-600 text-sm md:text-base leading-6">
-                65% of sales representatives have achieved their quotas by adopting.
+                65% of sales representatives have achieved their quotas by
+                adopting.
               </p>
             </div>
 
