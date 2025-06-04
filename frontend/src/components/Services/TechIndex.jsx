@@ -31,7 +31,7 @@ export default function ProductionProcess() {
               <button
                 key={tab}
                 onClick={() => setActiveTab(tab)}
-                className={`flex-1 px-4 sm:px-8 py-3 sm:py-4 font-semibold text-xs sm:text-sm tracking-wider transition-all duration-300 ${
+                className={`flex-1 px-4 sm:px-8 py-3 sm:py-4 font-semibold text-xs sm:text-sm tracking-wider transition-all duration-500 ${
                   activeTab === tab
                     ? "bg-blue-500 text-white"
                     : "bg-white text-gray-800 hover:bg-gray-100"
@@ -49,8 +49,8 @@ export default function ProductionProcess() {
           
           {/* Learn More Button */}
           <div className="group cursor-pointer inline-flex items-center justify-center lg:justify-start w-full lg:w-auto">
-            <ArrowRight className="w-5 h-5 text-blue-400 mr-3 transition-transform duration-300" />
-            <span className="text-blue-400 font-semibold text-sm md:text-base tracking-wide transition-transform duration-300 group-hover:-translate-x-3">
+            <ArrowRight className="w-5 h-5 text-blue-400 mr-3 transition-transform duration-500" />
+            <span className="text-blue-400 font-semibold text-sm md:text-base tracking-wide transition-transform duration-500 group-hover:-translate-x-3">
               LEARN MORE
             </span>
           </div>

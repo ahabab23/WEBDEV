@@ -73,7 +73,7 @@ function PageTitle() {
 
   return (
     <div 
-      className="w-full bg-cover bg-center bg-no-repeat relative flex items-center justify-center h-80 p-16"
+      className="w-full sm:top-28 top-20 mb-20  bg-cover bg-center bg-no-repeat relative flex items-center justify-center h-80 p-10"
       style={{ backgroundImage: `url(${bgHeader})` }}
     >
       {/* Content container */}

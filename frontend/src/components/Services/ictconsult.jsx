@@ -17,7 +17,7 @@ export default function ICTConsult() {
         </h3>
         <Link
           to="/contact"
-          className="border bg-blue-500 text-white hover:bg-purple-700 duration-300 px-8 py-4  text-lg font-medium"
+          className="border bg-blue-500 text-white hover:bg-purple-700 duration-500 px-8 py-4  text-lg font-medium"
         >
           CONTACT US
         </Link>

@@ -60,7 +60,7 @@ export default function TechnologyIndex() {
               key={label}
               target="_blank"
               rel="noopener noreferrer"
-              className="border border-white/20 p-6 rounded-md flex flex-col items-center justify-center text-white hover:bg-[#6EC1E4] transition duration-300"
+              className="border border-white/20 p-6 rounded-md flex flex-col items-center justify-center text-white hover:bg-[#6EC1E4] transition duration-500"
             >
               <img
                 src={icon}

@@ -19,7 +19,7 @@ const logos = [
 
 const Carousel = () => {
   return (
-    <div className="py-10 bg-gray-50">
+    <div className="py-8 bg-gray-50">
       <Swiper
         spaceBetween={40}
         slidesPerView={4}
@@ -36,7 +36,7 @@ const Carousel = () => {
             <img
               src={logo.src}
               alt={logo.alt}
-              className="w-32 h-auto mx-auto filter grayscale hover:grayscale-0 transition duration-300"
+              className="w-36 h-auto mx-auto filter grayscale hover:grayscale-0 transition duration-500"
             />
           </SwiperSlide>
         ))}

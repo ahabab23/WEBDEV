@@ -69,8 +69,8 @@ function Human() {
 
             {/* Learn More Button */}
             <div className="group cursor-pointer inline-flex items-center justify-center lg:justify-start w-full lg:w-auto">
-              <ArrowRight className="w-5 h-5 text-blue-400 mr-3 transition-transform duration-300" />
-              <span className="text-blue-400 font-semibold text-sm md:text-base tracking-wide transition-transform duration-300 group-hover:-translate-x-3">
+              <ArrowRight className="w-5 h-5 text-blue-400 mr-3 transition-transform duration-500" />
+              <span className="text-blue-400 font-semibold text-sm md:text-base tracking-wide transition-transform duration-500 group-hover:-translate-x-3">
                 LEARN MORE
               </span>
             </div>

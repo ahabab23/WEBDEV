@@ -3,7 +3,7 @@ import { Globe, Mail, Phone } from 'lucide-react';
 
 const ContactInfo = () => {
   return (
-    <div className="bg-white p-8 rounded-lg">
+    <div className=" p-8 rounded-lg relative sm:top-10">
       <div className="mb-8">
         <p className="text-sm text-purple-600 font-medium mb-2">// CONTACT DETAILS</p>
         <h2 className="text-4xl font-bold text-gray-900 mb-4">Contact us</h2>
@@ -16,11 +16,11 @@ const ContactInfo = () => {
 
       <div className="space-y-6">
         {/* Address Card */}
-        <div className="group  p-6   hover:bg-white hover:shadow-lg hover:border-blue-200 transition-all duration-300 cursor-pointer transform hover:-translate-y-1">
+        <div className="group  p-6   hover:bg-white hover:shadow-lg hover:border-blue-200 transition-all duration-500 cursor-pointer transform hover:-translate-y-1">
           <div className="flex items-start space-x-4">
             <div className="flex-shrink-0">
-              <div className="w-12 h-12  flex items-center justify-center group-hover:bg-blue-500 transition-colors duration-300">
-                <Globe className="w-6 h-6 text-blue-600 group-hover:text-white transition-colors duration-300" />
+              <div className="w-12 h-12  flex items-center justify-center group-hover:bg-blue-500 transition-colors duration-500">
+                <Globe className="w-6 h-6 text-blue-600 group-hover:text-white transition-colors duration-500" />
               </div>
             </div>
             <div>
@@ -33,11 +33,11 @@ const ContactInfo = () => {
         </div>
 
         {/* Email Card */}
-        <div className="group  p-6  hover:bg-white hover:shadow-lg hover:border-blue-200 transition-all duration-300 cursor-pointer transform hover:-translate-y-1">
+        <div className="group  p-6  hover:bg-white hover:shadow-lg hover:border-blue-200 transition-all duration-500 cursor-pointer transform hover:-translate-y-1">
           <div className="flex items-start space-x-4">
             <div className="flex-shrink-0">
-              <div className="w-12 h-12  flex items-center justify-center group-hover:bg-blue-500 transition-colors duration-300">
-                <Mail className="w-6 h-6 text-blue-600 group-hover:text-white transition-colors duration-300" />
+              <div className="w-12 h-12  flex items-center justify-center group-hover:bg-blue-500 transition-colors duration-500">
+                <Mail className="w-6 h-6 text-blue-600 group-hover:text-white transition-colors duration-500" />
               </div>
             </div>
             <div>
@@ -48,11 +48,11 @@ const ContactInfo = () => {
         </div>
 
         {/* Phone Card */}
-        <div className="group  p-6  hover:bg-white hover:shadow-lg hover:border-blue-200 transition-all duration-300 cursor-pointer transform hover:-translate-y-1">
+        <div className="group  p-6  hover:bg-white hover:shadow-lg hover:border-blue-200 transition-all duration-500 cursor-pointer transform hover:-translate-y-1">
           <div className="flex items-start space-x-4">
             <div className="flex-shrink-0">
-              <div className="w-12 h-12 flex items-center justify-center group-hover:bg-blue-500 transition-colors duration-300">
-                <Phone className="w-6 h-6 text-blue-600 group-hover:text-white transition-colors duration-300" />
+              <div className="w-12 h-12 flex items-center justify-center group-hover:bg-blue-500 transition-colors duration-500">
+                <Phone className="w-6 h-6 text-blue-600 group-hover:text-white transition-colors duration-500" />
               </div>
             </div>
             <div>
